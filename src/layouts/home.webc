@@ -1,4 +1,6 @@
-<ht-ml>
-	<hero @html="this.site.title"></hero>
-	<template @html="this.content" webc:nokeep></template>
-</ht-ml>
+---
+layout: ./base.webc
+---
+
+<hero-block @html="this.site.title"></hero-block>
+<template @html="this.content" webc:nokeep></template>

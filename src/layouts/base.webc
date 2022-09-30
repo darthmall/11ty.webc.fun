@@ -1,3 +1,23 @@
-<ht-ml>
-	<template @html="this.content" webc:nokeep></template>
-</ht-ml>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<title @html="this.site.title"></title>
+
+  <meta name="author" content="W. Evan Sheehan">
+  <meta name="description" :content="this.site.description">
+
+  <link rel="stylesheet" href="/style.css" webc:raw>
+  <style @html="this.getCSS(this.page.url)"></style>
+  <script @html="this.getJS(this.page.url)"></script>
+</head>
+
+<body>
+  <template @html="this.content" webc:nokeep></template>
+</body>
+
+</html>
