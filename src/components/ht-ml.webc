@@ -1,30 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" webc:keep>
+
+<head webc:keep>
 	<meta charset="UTF-8">
-	<title @html="`${this.title} - ${this.site.title}`"></title>
-<style webc:keep>
-* {
-	margin: 0;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-* + * {
-	margin-block-start: 1em;
-}
+	<title @html="this.site.title"></title>
 
-html {
-	font-family: system-ui, sans-serif;
-	background-color: snow;
-	color: #333;
-}
+  <meta name="author" content="W. Evan Sheehan">
+  <meta name="description" :content="this.site.description">
 
-body {
-	margin-inline: auto;
-	max-width: 70ch;
-}
-</style>
 </head>
-<body>
-<slot></slot>
+
+<body webc:keep>
+  <slot></slot>
 </body>
+
 </html>
