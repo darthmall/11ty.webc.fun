@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title @html="`${this.title} - ${this.site.title}`"></title>
+<style webc:keep>
+* {
+	margin: 0;
+}
+
+* + * {
+	margin-block-start: 1em;
+}
+
+html {
+	font-family: system-ui, sans-serif;
+	background-color: snow;
+	color: #333;
+}
+
+body {
+	margin-inline: auto;
+	max-width: 70ch;
+}
+</style>
+</head>
+<body>
+<slot></slot>
+</body>
+</html>
