@@ -1,4 +1,14 @@
 <boiler-plate webc:nokeep>
 	<h1 @html="this.title"></h1>
 	<template @html="this.content" webc:nokeep></template>
+	<h2>Posts</h2>
+	<ul>
+		<script webc:type="render" webc:is="template">
+			function () {
+				return this.collections.post.map((p) => `<li>
+					<a href="${p.url}">${p.data.title}</a>
+				</li>`);
+			}
+		</script>
+	</ul>
 </boiler-plate>
