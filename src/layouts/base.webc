@@ -1,4 +1,4 @@
-<boiler-plate webc:nokeep>
+<ht-ml>
 	<h1 @html="this.title"></h1>
 	<template @html="this.content" webc:nokeep></template>
 	<h2>Posts</h2>
@@ -11,4 +11,4 @@
 			}
 		</script>
 	</ul>
-</boiler-plate>
+</ht-ml>
