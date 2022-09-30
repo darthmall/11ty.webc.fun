@@ -26,6 +26,6 @@ body {
 </head>
 <body>
 	<h1 @html="this.title"></h1>
-	<main @html="this.content"></main>
+	<template @html="this.content" webc:nokeep></template>
 </body>
 </html>
