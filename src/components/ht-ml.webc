@@ -11,6 +11,7 @@
   <meta name="author" content="W. Evan Sheehan">
   <meta name="description" :content="this.site.description">
 
+  <link rel="stylesheet" href="/style.css" webc:raw>
 </head>
 
 <body webc:keep>

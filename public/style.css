@@ -1,0 +1,5 @@
+@layer props, normalize;
+
+@import "https://unpkg.com/open-props" layer(props);
+@import "https://unpkg.com/open-props/normalize.min.css" layer(normalize);
+

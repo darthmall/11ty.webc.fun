@@ -5,6 +5,11 @@ module.exports = function(eleventyConfig) {
 		components: "src/components/**/*.webc",
 	});
 
+	// FIXME: The passthrough behavior in the dev server doesn't seem to be
+	// working, so for now we'll go back to the copy behavior.
+	eleventyConfig.setServerPassthroughCopyBehavior("copy");
+	eleventyConfig.addPassthroughCopy({ "public": "." });
+
 	return {
 		dir: {
 			input: "src/pages",
