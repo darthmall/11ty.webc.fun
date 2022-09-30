@@ -1,0 +1,16 @@
+{
+  "name": "webc-test",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Test bed for WebC with Eleventy",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --incremental"
+  },
+  "author": "W. Evan Sheehan <wally.es@proton.me>",
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.16",
+    "@11ty/eleventy-plugin-webc": "^0.4.0"
+  }
+}
