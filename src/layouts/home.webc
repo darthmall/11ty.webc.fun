@@ -1,0 +1,4 @@
+<ht-ml>
+	<hero @html="this.site.title"></hero>
+	<template @html="this.content" webc:nokeep></template>
+</ht-ml>

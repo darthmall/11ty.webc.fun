@@ -1,5 +1,5 @@
 ---
-layout: base.webc
+layout: home.webc
 ---
 
 Testing.
