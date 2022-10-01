@@ -1,9 +1,6 @@
 ---
 title: Partials with WebC
 description: Package up common snippets of HTML inside of WebC for fun and profit!
-tags:
-	- technique
-layout: plain.webc
 ---
 
 Partials — or snippets — are the simplest form of code reuse.
