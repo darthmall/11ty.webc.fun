@@ -1,8 +1,9 @@
 <footer>
-	<template webc:type="11ty" 11ty:type="md">
-		Built with [11ty](https://11ty.dev), [WebC](https://github.com/11ty/webc),
-		and [Open Props](https://open-props.style/).
-	</template>
+	<p>
+		<copyright></copyright>. Built with <a href="https://11ty.dev/">11ty</a>,
+		<a href="https://github.com/11ty/webc/">WebC</a>, and
+		<a href="https://open-props.style/">Open Props</a>.
+	</p>
 </footer>
 
 <!--
