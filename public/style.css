@@ -4,7 +4,22 @@
 @import "https://unpkg.com/open-props/normalize.min.css" layer(normalize);
 
 @layer default {
-	article {
+	html,
+	body {
+		height: 100%;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	body > * {
 		padding-inline: var(--size-fluid-4);
+	}
+
+	footer {
+		margin-block-start: auto;
+		padding-block: var(--size-fluid-3);
 	}
 }

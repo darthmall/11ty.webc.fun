@@ -18,6 +18,7 @@
 
 <body>
   <template @html="this.content" webc:nokeep></template>
+  <site-foot webc:nokeep />
 </body>
 
 </html>
