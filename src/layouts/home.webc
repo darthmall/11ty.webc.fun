@@ -3,7 +3,8 @@ layout: ./base.webc
 ---
 
 <hero-block>
-	<template @html="this.site.title" webc:nokeep></template>
+	<template @html="this.site.title" slot="title" webc:nokeep></template>
+	<p @html="this.site.description"></p>
 </hero-block>
 
 <article @html="this.content"></article>
