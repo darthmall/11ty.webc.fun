@@ -17,9 +17,4 @@
 	body > * {
 		padding-inline: var(--size-fluid-4);
 	}
-
-	footer {
-		margin-block-start: auto;
-		padding-block: var(--size-fluid-3);
-	}
 }

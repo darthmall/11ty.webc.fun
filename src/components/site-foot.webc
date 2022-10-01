@@ -4,3 +4,15 @@
 		and [Open Props](https://open-props.style/).
 	</template>
 </footer>
+
+<!--
+	FIXME: Have to use webc:keep here because for some reason these styles
+	aren't being aggregated into the header style tag. Hopefully that's a bug,
+	because providing component styles like this would be really handy.
+-->
+<style webc:keep>
+	footer {
+		margin-block-start: auto;
+		padding-block: var(--size-fluid-3);
+	}
+</style>
