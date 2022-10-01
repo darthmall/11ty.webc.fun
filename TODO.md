@@ -1,3 +1,4 @@
 - [ ] RSS Feed
 - [ ] Typography
 - [ ] Recent Posts
+- [ ] Format HTML
