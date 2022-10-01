@@ -1,8 +1,14 @@
+const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const pluginWebC = require("@11ty/eleventy-plugin-webc");
 
 module.exports = function(eleventyConfig) {
+	eleventyConfig.addPlugin(pluginRSS);
 	eleventyConfig.addPlugin(pluginWebC, {
 		components: "src/components/**/*.webc",
+	});
+
+	eleventyConfig.addCollection("feed", function (collectionApi) {
+		return collectionApi.getFilteredByGlob("src/pages/techniques/**/*");
 	});
 
 	// FIXME: The passthrough behavior in the dev server doesn't seem to be

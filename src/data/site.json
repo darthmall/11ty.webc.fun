@@ -1,4 +1,9 @@
 {
 	"title": "11ty ♥ WebC",
-	"description": "It’s like we’re actually doing web development"
+	"description": "It’s like we’re actually doing web development",
+	"url": "https://11ty.webc.fun/",
+	"author": {
+		"name": "W. Evan Sheehan",
+		"email": "darth_mall@pm.me"
+	}
 }
