@@ -2,5 +2,8 @@
 layout: ./base.webc
 ---
 
-<hero-block @html="this.site.title"></hero-block>
+<hero-block>
+	<template @html="this.site.title" webc:nokeep></template>
+</hero-block>
+
 <template @html="this.content" webc:nokeep></template>
