@@ -3,10 +3,10 @@ title: Partials with WebC
 description: Package up common snippets of HTML inside of WebC for fun and profit!
 tags:
 	- technique
-layout: base.webc
+layout: plain.webc
 ---
 
-Partials — or snippets — are, perhaps the simplest form of code reuse.
+Partials — or snippets — are the simplest form of code reuse.
 They require no parameterization.
 You simply plop them down somewhere in your markup and they get replaced by a different block of code.
 They may be completely static, or rely only on some globally available context.
