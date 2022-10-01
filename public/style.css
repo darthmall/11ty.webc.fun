@@ -1,5 +1,10 @@
-@layer props, normalize;
+@layer props, normalize, default;
 
 @import "https://unpkg.com/open-props" layer(props);
 @import "https://unpkg.com/open-props/normalize.min.css" layer(normalize);
 
+@layer default {
+	article {
+		padding-inline: var(--size-fluid-4);
+	}
+}

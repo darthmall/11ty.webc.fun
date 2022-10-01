@@ -6,4 +6,4 @@ layout: ./base.webc
 	<template @html="this.site.title" webc:nokeep></template>
 </hero-block>
 
-<template @html="this.content" webc:nokeep></template>
+<article @html="this.content"></article>
