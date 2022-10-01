@@ -3,11 +3,20 @@
 <style webc:scoped>
 	:host {
 		display: block;
+		margin-block-end: var(--size-fluid-6);
 		padding-block: var(--size-fluid-8);
+		padding-inline: var(--size-fluid-4);
+		background-image: var(--gradient-15);
 	}
 
 	h1 {
 		font-size: var(--font-size-fluid-3);
 		font-weight: var(--font-weight-9);
+	}
+
+	@media screen and (prefers-color-scheme: dark) {
+		:host {
+			background-image: var(--gradient-23);
+		}
 	}
 </style>
