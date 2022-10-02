@@ -4,20 +4,17 @@
 <style webc:scoped>
 	:host {
 		display: block;
-		margin-block-end: var(--size-fluid-6);
-		padding-block: var(--size-fluid-8);
-		padding-inline: var(--size-fluid-4);
+		margin-block-end: var(--space-xl);
+		padding-block: var(--space-xl);
 		background-image: var(--gradient-15);
 	}
 
 	h1 {
-		font-size: var(--font-size-fluid-3);
-		font-weight: var(--font-weight-9);
+		margin-block: 0;
 	}
 
 	.body {
-		margin-block-start: var(--size-fluid-1);
-		font-size: var(--font-size-fluid-1);
+		font-size: var(--step-1);
 	}
 
 	.body > * {

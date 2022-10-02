@@ -1,24 +1,81 @@
-@layer props, normalize, default;
+@layer reset, props, default;
 
-@import "https://unpkg.com/open-props" layer(props);
-@import "https://unpkg.com/open-props/normalize.min.css" layer(normalize);
+@import "https://unpkg.com/open-props/gradients.min.css" layer(props);
+@import "https://unpkg.com/open-props/gray.min.css" layer(props);
+@import "https://unpkg.com/open-props/blue.min.css" layer(props);
+@import "https://unpkg.com/open-props/grape.min.css" layer(props);
 
-@layer default {
+@layer props {
+	:root {
+		/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1140,20,1.25,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+		--step--1: clamp(0.94rem, calc(0.91rem + 0.12vw), 1.00rem);
+		--step-0: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
+		--step-1: clamp(1.35rem, calc(1.27rem + 0.41vw), 1.56rem);
+		--step-2: clamp(1.62rem, calc(1.49rem + 0.65vw), 1.95rem);
+		--step-3: clamp(1.94rem, calc(1.75rem + 0.97vw), 2.44rem);
+		--step-4: clamp(2.33rem, calc(2.05rem + 1.40vw), 3.05rem);
+		--step-5: clamp(2.80rem, calc(2.40rem + 1.98vw), 3.82rem);
+
+		/* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1140,20,1.25,5,1,&s=0.5,1.5|2|4|8, */
+		--space-xs: clamp(0.56rem, calc(0.54rem + 0.12vw), 0.63rem);
+		--space-s: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
+		--space-m: clamp(1.69rem, calc(1.61rem + 0.37vw), 1.88rem);
+		--space-l: clamp(2.25rem, calc(2.15rem + 0.49vw), 2.50rem);
+		--space-xl: clamp(4.50rem, calc(4.30rem + 0.98vw), 5.00rem);
+		--space-2xl: clamp(9.00rem, calc(8.61rem + 1.95vw), 10.00rem);
+
+		/* One-up pairs */
+		--space-xs-s: clamp(0.56rem, calc(0.29rem + 1.34vw), 1.25rem);
+		--space-s-m: clamp(1.13rem, calc(0.83rem + 1.46vw), 1.88rem);
+		--space-m-l: clamp(1.69rem, calc(1.37rem + 1.59vw), 2.50rem);
+		--space-l-xl: clamp(2.25rem, calc(1.18rem + 5.37vw), 5.00rem);
+		--space-xl-2xl: clamp(4.50rem, calc(2.35rem + 10.73vw), 10.00rem);
+	}
+}
+
+@layer reset {
+	* {
+		margin: 0;
+	}
+
 	html,
 	body {
 		height: 100%;
 	}
+}
 
+@layer default {
 	body {
 		display: flex;
 		flex-direction: column;
+
+		font-family: system-ui, sans-serif;
+		font-size: var(--step-0);
+		line-height: 1.5;
 	}
 
-	body > * {
-		padding-inline: var(--size-fluid-4);
+	h1 {
+		margin-block: var(--space-xl);
+		font-size: var(--step-5);
 	}
 
-	* + p {
-		margin-block-start: 1em;
+	h2 {
+		margin-block-start: var(--space-xl);
+		margin-block-end: var(--space-l);
+		font-size: var(--step-4);
+	}
+
+	h3 {
+		margin-block-start: var(--space-l);
+		margin-block-end: var(--space-m);
+		font-size: var(--step-3);
+	}
+
+	p {
+		max-width: 72ch;
+	}
+
+	p + p {
+		margin-block-start: var(--space-m);
 	}
 }
