@@ -6,7 +6,6 @@
 		display: block;
 		margin-block-end: var(--space-xl);
 		padding-block: var(--space-xl);
-		background-image: var(--gradient-15);
 	}
 
 	h1 {
@@ -19,11 +18,5 @@
 
 	.body > * {
 		font: inherit;
-	}
-
-	@media screen and (prefers-color-scheme: dark) {
-		:host {
-			background-image: var(--gradient-23);
-		}
 	}
 </style>
