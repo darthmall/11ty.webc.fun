@@ -10,6 +10,7 @@
 
 	h1 {
 		margin-block: 0;
+		font-family: var(--font-display);
 	}
 
 	.body {
