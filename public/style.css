@@ -5,8 +5,43 @@
 @import "https://unpkg.com/open-props/blue.min.css" layer(props);
 @import "https://unpkg.com/open-props/grape.min.css" layer(props);
 
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	src: url("/fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	src: url("/fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	src: url("/fonts/AtkinsonHyperlegible-Italic.woff2") format("woff2");
+	font-weight: normal;
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Atkinson Hyperlegible";
+	src: url("/fonts/AtkinsonHyperlegible-Bold-Italic.woff2") format("woff2");
+	font-weight: bold;
+	font-style: italic;
+	font-display: swap;
+}
+
 @layer props {
 	:root {
+		--font-body: "Atkinson Hyperlegible", system-ui, sans-serif;
+		--font-display: "Getai Grotesk Display", system-ui, sans-serif;
+
 		/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1140,20,1.25,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
 		--step--1: clamp(0.94rem, calc(0.91rem + 0.12vw), 1.00rem);
 		--step-0: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
@@ -53,7 +88,7 @@
 		width: clamp(15rem, 90vw, 75rem);
 		padding-inline: var(--space-s);
 
-		font-family: system-ui, sans-serif;
+		font-family: var(--font-body);
 		font-size: var(--step-0);
 		line-height: 1.5;
 	}
@@ -76,7 +111,7 @@
 	}
 
 	p {
-		max-width: 72ch;
+		max-width: 60ch;
 	}
 
 	p + p {
