@@ -123,6 +123,17 @@
 	}
 
 	p + p {
-		margin-block-start: var(--space-m);
+		margin-block-start: var(--space-s);
+	}
+
+	blockquote,
+	figure {
+		margin-block: var(--space-l);
+	}
+
+	figcaption {
+		margin-block-start: var(--space-xs);
+
+		font-size: var(--step--1);
 	}
 }
