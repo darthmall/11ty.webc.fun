@@ -5,8 +5,9 @@
 		if (this.limit) collection = collection.slice(0, this.limit);
 
 		return collection.map((page) => `<article>
-		  <a href="${page.url}">${page.data.title}</a>
-			<p>${page.data.description}</p>
-		</article>`);
+				<a href="${page.url}">${page.data.title}</a>
+				<p>${page.data.description}</p>
+			</article>`)
+			.join("");
 	}
 </script>

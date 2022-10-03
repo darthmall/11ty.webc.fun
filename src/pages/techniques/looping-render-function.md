@@ -22,9 +22,11 @@ Let’s start simple.
 <ul>
   <script webc:type="render" webc:is="template">
     function () {
-      return this.collections.all.map((page) => `<li>
-        <a href="${page.url}>${page.data.title}</a>
-      </li>`;
+      return this.collections.all
+        .map((page) => `<li>
+            <a href="${page.url}>${page.data.title}</a>
+          </li>`)
+        .join("");
     }
   </script>
 </ul>
@@ -46,9 +48,10 @@ You pass it a tag name, and an optional limit, and it produces `<article>` tags 
     if (this.limit) collection = collection.slice(0, this.limit);
 
     return collection.map((page) => `<article>
-      <a href="${page.url}">${page.data.title}</a>
-      <p>${page.data.description}</p>
-    </article>`);
+        <a href="${page.url}">${page.data.title}</a>
+        <p>${page.data.description}</p>
+      </article>`)
+      .join("");
   }
 </script>
 ```
