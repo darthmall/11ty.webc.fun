@@ -92,6 +92,19 @@
 }
 
 @layer default {
+	:root {
+		--surface-1: var(--gray-0);
+		--text-1: var(--gray-7);
+		--text-2: var(--gray-9);
+		--link: var(--blue-9);
+		--link-visited: var(--grape-7);
+	}
+
+	html {
+		background-color: var(--surface-1);
+		color: var(--text-2);
+	}
+
 	body {
 		display: flex;
 		flex-direction: column;
@@ -142,5 +155,13 @@
 		margin-block-start: var(--space-xs);
 
 		font-size: var(--step--1);
+	}
+
+	a {
+		color: var(--link);
+	}
+
+	a:visited {
+		color: var(--link-visited);
 	}
 }
