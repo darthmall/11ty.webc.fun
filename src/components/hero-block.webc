@@ -1,11 +1,33 @@
 <h1><slot name="title"></slot></h1>
 <div class="body"><slot></slot></div>
+<div class="blob"></div>
 
 <style webc:scoped>
 	:host {
+		position: relative;
 		display: block;
 		margin-block-end: var(--space-xl);
-		padding-block: var(--space-xl);
+		border: var(--border-size-1) solid var(--text-1);
+		padding: var(--space-xl);
+	}
+
+	.blob {
+		position: absolute;
+		left: calc(var(--space-l) * -1);
+		top: calc(var(--space-l) * -1);
+		z-index: 1;
+
+		border-radius: var(--radius-blob-3);
+		height: calc(100% + (var(--space-l) * 2));
+		aspect-ratio: var(--ratio-square);
+
+		background-image: var(--gradient-15);
+	}
+
+	h1,
+	.body {
+		position: relative;
+		z-index: 2;
 	}
 
 	h1 {
