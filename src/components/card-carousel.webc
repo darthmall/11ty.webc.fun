@@ -32,6 +32,15 @@
 		background-color: white;
 
 		box-shadow: var(--shadow-4);
+
+		transition-property: transform, box-shadow;
+		transition-duration: 300ms;
+		transition-timing-function: ease;
+	}
+
+	article:hover {
+		transform: translateY(-0.5rem);
+		box-shadow: var(--shadow-5);
 	}
 
 	article > a:first-of-type {
