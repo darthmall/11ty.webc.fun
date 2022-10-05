@@ -8,7 +8,7 @@ module.exports = function(eleventyConfig) {
 	});
 
 	eleventyConfig.addCollection("feed", function (collectionApi) {
-		return collectionApi.getFilteredByGlob("src/pages/techniques/**/*");
+		return collectionApi.getFilteredByGlob("src/pages/recipes/**/*");
 	});
 
 	// FIXME: The passthrough behavior in the dev server doesn't seem to be

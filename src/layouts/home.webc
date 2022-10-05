@@ -12,5 +12,5 @@ layout: ./base.webc
 
 <article @html="this.content"></article>
 
-<h2>Techniques</h2>
-<card-carousel @tag="technique"></card-carousel>
+<h2>Recently Updated</h2>
+<card-carousel @tag="recipe"></card-carousel>
