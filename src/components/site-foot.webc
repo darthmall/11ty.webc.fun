@@ -1,6 +1,6 @@
 <footer>
 	<p>
-		<copyright></copyright>. Built with <a href="https://11ty.dev/">11ty</a>,
+		<copyright></copyright> Built with <a href="https://11ty.dev/">11ty</a>,
 		<a href="https://github.com/11ty/webc/">WebC</a>, and
 		<a href="https://open-props.style/">Open Props</a>.
 	</p>
@@ -15,5 +15,19 @@
 	footer {
 		margin-block-start: auto;
 		padding-block: var(--space-xl);
+
+		font-size: var(--step--1);
 	}
+
+	footer::before {
+		display: block;
+		content: "";
+
+		margin-block-end: var(--space-s);
+		height: 1px;
+		width: 33%;
+
+		background-color: var(--surface-4);
+	}
+
 </style>
