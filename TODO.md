@@ -5,5 +5,7 @@
 - [ ] Dark theme
 - [ ] Navigation
 - [ ] Colophon
+- [ ] Skip to content
+
 - [ ] Format HTML
 - [ ] Convert RSS feed to a WebC template
