@@ -118,7 +118,6 @@
 
 		margin-inline: auto;
 		width: clamp(15rem, 90vw, 75rem);
-		padding-block-start: var(--space-l);
 		padding-inline: var(--space-s);
 
 		font-family: var(--font-body);

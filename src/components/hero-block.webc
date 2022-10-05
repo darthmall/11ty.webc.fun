@@ -6,7 +6,7 @@
 	:host {
 		position: relative;
 		display: block;
-		margin-block-end: var(--space-xl);
+		margin-block: var(--space-xl);
 		border: var(--border-size-1) solid var(--text-1);
 		padding: var(--space-xl);
 	}
