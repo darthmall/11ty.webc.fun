@@ -1,5 +1,9 @@
 - [x] RSS Feed
 - [x] Typography
-- [ ] Recent Posts
+- [x] Recent Posts
+- [ ] Style figures
+- [ ] Dark theme
+- [ ] Navigation
+- [ ] Colophon
 - [ ] Format HTML
 - [ ] Convert RSS feed to a WebC template
