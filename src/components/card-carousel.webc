@@ -18,7 +18,7 @@
 
 		display: grid;
 		grid-auto-flow: column;
-		grid-auto-columns: clamp(15rem, 30vw, 30rem);
+		grid-auto-columns: clamp(15rem, 30vw, 20rem);
 	}
 
 	article {
