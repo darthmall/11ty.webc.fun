@@ -159,10 +159,26 @@
 		margin-block: var(--space-l);
 	}
 
+	figure {
+		contain: content;
+		border: var(--border-size-1) solid var(--surface-3);
+		border-radius: var(--radius-2);
+
+		background-color: white;
+	}
+
+	figure > * {
+		padding: var(--space-m);
+	}
+
 	figcaption {
 		margin-block-start: var(--space-xs);
+		border-block-start: var(--border-size-1) solid var(--surface-3);
+		padding-block: var(--space-xs);
 
 		font-size: var(--step--1);
+
+		background-color: var(--surface-2);
 	}
 
 	a {

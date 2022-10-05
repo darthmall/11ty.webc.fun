@@ -18,7 +18,8 @@ Partials in WebC are trivially easy.
 </footer>
 ```
 
-	<figcaption>site-footer.webc</figcaption>
+<figcaption>site-footer.webc</figcaption>
+
 </figure>
 
 With the above <samp>.webc</samp> file, we can simply plop down `<site-footer></site-footer>` anywhere in our markup and when the WebC compiler encounters that tag, it will replace it with our footer markup.

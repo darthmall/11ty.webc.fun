@@ -32,7 +32,8 @@ Let’s start simple.
 </ul>
 ```
 
-	<figcaption>Listing all pages in your collections</figcaption>
+<figcaption>Listing all pages in your collections</figcaption>
+
 </figure>
 
 For this site, I created a custom component — <samp>collection-list.webc</samp> — that renders links to pages from a collection.
@@ -56,7 +57,8 @@ You pass it a tag name, and an optional limit, and it produces `<article>` tags 
 </script>
 ```
 
-	<figcaption>collection-list.webc</figcaption>
+<figcaption>collection-list.webc</figcaption>
+
 </figure>
 
 This component is then used on the home page to render links out to all of the techniques listed here on the site.
@@ -69,6 +71,7 @@ This component is then used on the home page to render links out to all of the t
 ```
 
 <figcaption>home.webc</figcaption>
+
 </figure>
 
 So you can either just plop the render function down where you need it for an ad hoc loop, or you can wrap it up in a component that you can just drop in where you need it.

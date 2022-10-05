@@ -1,7 +1,7 @@
 - [x] RSS Feed
 - [x] Typography
 - [x] Recent Posts
-- [ ] Style figures
+- [x] Style figures
 - [ ] Dark theme
 - [ ] Navigation
 - [ ] Colophon
