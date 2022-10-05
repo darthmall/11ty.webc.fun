@@ -22,6 +22,8 @@
 	}
 
 	article {
+		contain: strict;
+
 		border: var(--border-size-1) solid var(--surface-3);
 		border-radius: var(--radius-2);
 		padding: var(--space-s);
@@ -33,8 +35,23 @@
 	}
 
 	article > a:first-of-type {
+		--link: initial;
+		--link-visited: initial;
+
 		font-size: var(--step-2);
 		font-weight: bold;
 		line-height: var(--line-height-s);
+		text-decoration: none;
+	}
+
+	article > a:first-of-type::after {
+		display: block;
+		content: "";
+
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
 	}
 </style>

@@ -165,11 +165,11 @@
 	}
 
 	a {
-		color: var(--link);
+		color: var(--link, inherit);
 	}
 
 	a:visited {
-		color: var(--link-visited);
+		color: var(--link-visited, inherit);
 	}
 }
 
