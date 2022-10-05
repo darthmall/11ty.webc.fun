@@ -180,6 +180,10 @@
 		background-color: var(--surface-2);
 	}
 
+	pre {
+		overflow-inline: auto;
+	}
+
 	a {
 		color: var(--link, inherit);
 	}
