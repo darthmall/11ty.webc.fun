@@ -1,5 +1,5 @@
 - [x] RSS Feed
-- [ ] Typography
+- [x] Typography
 - [ ] Recent Posts
 - [ ] Format HTML
 - [ ] Convert RSS feed to a WebC template
