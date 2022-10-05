@@ -13,4 +13,4 @@ layout: ./base.webc
 <article @html="this.content"></article>
 
 <h2>Techniques</h2>
-<collection-list @tag="technique"></collection-list>
+<card-carousel @tag="technique"></card-carousel>
