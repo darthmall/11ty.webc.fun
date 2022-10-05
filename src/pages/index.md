@@ -2,8 +2,9 @@
 layout: home.webc
 ---
 
-This website is built with [Eleventy](https://11ty.dev/) and [WebC](https://github.com/11ty/webc) to elucidate techniques for using them together.
+Here is a website built with [Eleventy](https://11ty.dev/) and [WebC](https://github.com/11ty/webc) that is about how you can build websites with Eleventy and WebC.
+It is a test bed.
+The recipes you’ll find here were used to develop this very site.
+Exciting, I know.
 
-You should not consider the techniques illustrated here as recommendations — or “best practices”, as they say.
-This website is as much a testbed for WebC as it is a showcase.
-It is an experiment intended to explore what can be done with WebC and Eleventy.
+> The proof of the pudding is in the eating.
