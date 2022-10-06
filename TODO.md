@@ -4,8 +4,9 @@
 - [x] Style figures
 - [x] Dark theme
 - [x] Navigation
-- [ ] Colophon
+- [ ] Dynamic page titles
 - [ ] Skip to content
 
+- [ ] Colophon
 - [ ] Format HTML
 - [ ] Convert RSS feed to a WebC template
