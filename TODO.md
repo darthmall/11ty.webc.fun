@@ -3,7 +3,7 @@
 - [x] Recent Posts
 - [x] Style figures
 - [x] Dark theme
-- [ ] Navigation
+- [x] Navigation
 - [ ] Colophon
 - [ ] Skip to content
 
