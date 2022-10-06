@@ -24,3 +24,7 @@ Partials in WebC are trivially easy.
 
 With the above <samp>.webc</samp> file, we can simply plop down `<site-footer></site-footer>` anywhere in our markup and when the WebC compiler encounters that tag, it will replace it with our footer markup.
 Easy peasy.
+
+This even works for SVG icons.
+Download the SVG, copy it into wherever WebC expects to find components, and replace the <samp>.svg</samp> extension with <samp>.webc</samp>.
+Then you can use a custom element tag anywhere in your markup, and WebC will replace it with the contents of that SVG.
