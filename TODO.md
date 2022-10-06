@@ -2,7 +2,7 @@
 - [x] Typography
 - [x] Recent Posts
 - [x] Style figures
-- [ ] Dark theme
+- [x] Dark theme
 - [ ] Navigation
 - [ ] Colophon
 - [ ] Skip to content
