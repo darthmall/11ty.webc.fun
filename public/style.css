@@ -1,4 +1,4 @@
-@layer reset, props, default, utility;
+@layer reset, props, config, default, utility;
 
 @import "https://unpkg.com/open-props/aspects.min.css" layer(props);
 @import "https://unpkg.com/open-props/borders.min.css" layer(props);
@@ -94,19 +94,55 @@
 	}
 }
 
-@layer default {
+@layer config {
 	:root {
-		--surface-1: var(--gray-0);
-		--surface-2: var(--gray-2);
-		--surface-3: var(--gray-3);
-		--surface-4: var(--gray-4);
-		--text-1: var(--gray-6);
-		--text-2: var(--gray-7);
-		--text-3: var(--gray-9);
-		--link: var(--blue-9);
-		--link-visited: var(--grape-7);
+		--surface-1-light: var(--gray-0);
+		--surface-2-light: white;
+		--surface-3-light: var(--gray-2);
+		--surface-4-light: var(--gray-4);
+		--text-1-light: var(--gray-6);
+		--text-2-light: var(--gray-7);
+		--text-3-light: var(--gray-9);
+		--link-light: var(--blue-9);
+		--link-visited-light: var(--grape-7);
+
+		--surface-1-dark: var(--gray-9);
+		--surface-2-dark: var(--gray-8);
+		--surface-3-dark: var(--gray-7);
+		--surface-4-dark: var(--gray-6);
+		--text-1-dark: var(--gray-0);
+		--text-2-dark: var(--gray-2);
+		--text-3-dark: var(--gray-3);
+		--link-dark: var(--blue-4);
+		--link-visited-dark: var(--grape-4);
+
+		--surface-1: var(--surface-1-light);
+		--surface-2: var(--surface-2-light);
+		--surface-3: var(--surface-3-light);
+		--surface-4: var(--surface-4-light);
+		--text-1: var(--text-1-light);
+		--text-2: var(--text-2-light);
+		--text-3: var(--text-3-light);
+		--link: var(--link-light);
+		--link-visited: var(--link-visited-light);
 	}
 
+	@media screen and (prefers-color-scheme: dark) {
+		:root {
+			--surface-1: var(--surface-1-dark);
+			--surface-2: var(--surface-2-dark);
+			--surface-3: var(--surface-3-dark);
+			--surface-4: var(--surface-4-dark);
+			--text-1: var(--text-1-dark);
+			--text-2: var(--text-2-dark);
+			--text-3: var(--text-3-dark);
+			--link: var(--link-dark);
+			--link-visited: var(--link-visited-dark);
+		}
+	}
+}
+
+@layer default {
 	html {
 		background-color: var(--surface-1);
 		color: var(--text-3);
@@ -160,10 +196,10 @@
 
 	figure {
 		contain: content;
-		border: var(--border-size-1) solid var(--surface-3);
+		border: var(--border-size-1) solid var(--surface-4);
 		border-radius: var(--radius-2);
 
-		background-color: white;
+		background-color: var(--surface-2);
 	}
 
 	figure > * {
@@ -172,12 +208,12 @@
 
 	figcaption {
 		margin-block-start: var(--space-xs);
-		border-block-start: var(--border-size-1) solid var(--surface-3);
+		border-block-start: var(--border-size-1) solid var(--surface-4);
 		padding-block: var(--space-xs);
 
 		font-size: var(--step--1);
 
-		background-color: var(--surface-2);
+		background-color: var(--surface-3);
 	}
 
 	blockquote {
