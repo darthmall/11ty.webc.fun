@@ -1,66 +1,32 @@
-<script webc:type="render" webc:is="template">
-	function () {
-		let collection = this.collections[this.tag];
+<div class="flow" style="--space: var(--space-l)">
+	<script webc:type="render" webc:is="template">
+		function () {
+			let collection = this.collections[this.tag];
 
-		if (this.limit) collection = collection.slice(0, this.limit);
+			if (this.limit) collection = collection.slice(0, this.limit);
 
-		return collection.map((page) => `<article class="flow">
-				<a href="${page.url}">${page.data.title}</a>
-				<p>${page.data.description}</p>
-			</article>`)
-			.join("");
-	}
-</script>
+			return collection.map((page) => `<article>
+					<a href="${page.url}">${page.data.title}</a>
+					<p>${page.data.description}</p>
+				</article>`)
+				.join("");
+		}
+	</script>
+</div>
 
 <style webc:scoped>
 	:host {
-		gap: var(--space-m);
-
-		display: grid;
-		grid-auto-flow: column;
-		grid-auto-columns: clamp(15rem, 30vw, 20rem);
-	}
-
-	article {
-		contain: strict;
-
-		border: var(--border-size-1) solid var(--surface-3);
-		border-radius: var(--radius-2);
-		padding: var(--space-s);
-		aspect-ratio: var(--ratio-portrait);
-
-		background-color: white;
-
-		box-shadow: var(--shadow-4);
-
-		transition-property: transform, box-shadow;
-		transition-duration: 300ms;
-		transition-timing-function: ease;
-	}
-
-	article:hover {
-		transform: translateY(-0.5rem);
-		box-shadow: var(--shadow-5);
+		display: block;
 	}
 
 	article > a:first-of-type {
-		--link: initial;
-		--link-visited: initial;
-
 		font-size: var(--step-2);
 		font-weight: bold;
 		line-height: var(--line-height-s);
 		text-decoration: none;
 	}
 
-	article > a:first-of-type::after {
-		display: block;
-		content: "";
-
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+	article > p {
+		margin-block-start: var(--space-xs);
 	}
 </style>
