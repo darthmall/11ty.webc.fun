@@ -103,8 +103,10 @@
 		--text-1-light: var(--gray-6);
 		--text-2-light: var(--gray-7);
 		--text-3-light: var(--gray-9);
-		--link-light: var(--blue-9);
+		--link-light: var(--blue-8);
+		--link-hover-light: var(--blue-9);
 		--link-visited-light: var(--grape-7);
+		--link-visited-hover-light: var(--grape-8);
 		--gradient-light: var(--gradient-15);
 
 		--surface-1-dark: var(--gray-9);
@@ -115,7 +117,9 @@
 		--text-2-dark: var(--gray-2);
 		--text-3-dark: var(--gray-3);
 		--link-dark: var(--blue-4);
+		--link-hover-dark: var(--blue-3);
 		--link-visited-dark: var(--grape-4);
+		--link-visited-hover-dark: var(--grape-3);
 		--gradient-dark: var(--gradient-3);
 
 		--surface-1: var(--surface-1-light);
@@ -126,7 +130,9 @@
 		--text-2: var(--text-2-light);
 		--text-3: var(--text-3-light);
 		--link: var(--link-light);
+		--link-hover: var(--link-hover-light);
 		--link-visited: var(--link-visited-light);
+		--link-visited-hover: var(--link-visited-hover-light);
 		--gradient: var(--gradient-light);
 	}
 
@@ -140,7 +146,9 @@
 			--text-2: var(--text-2-dark);
 			--text-3: var(--text-3-dark);
 			--link: var(--link-dark);
+			--link-hover: var(--link-hover-dark);
 			--link-visited: var(--link-visited-dark);
+			--link-visited-hover: var(--link-visited-hover-dark);
 			--gradient: var(--gradient-dark);
 		}
 	}
@@ -232,10 +240,19 @@
 
 	a {
 		color: var(--link, inherit);
+		transition: color 200ms linear;
+	}
+
+	a:hover {
+		color: var(--link-hover);
 	}
 
 	a:visited {
 		color: var(--link-visited, inherit);
+	}
+
+	a:visited:hover {
+		color: var(--link-visited-hover);
 	}
 }
 
