@@ -3,6 +3,7 @@ layout: ./base.webc
 ---
 
 <article>
+	<bread-crumbs></bread-crumbs>
 	<h1 @html="this.title"></h1>
 	<template @html="this.content" webc:nokeep></template>
 </article>

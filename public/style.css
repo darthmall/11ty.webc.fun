@@ -1,4 +1,4 @@
-@layer reset, props, config, default, utility;
+@layer reset, props, config, default, layout, utility;
 
 @import "https://unpkg.com/open-props/aspects.min.css" layer(props);
 @import "https://unpkg.com/open-props/borders.min.css" layer(props);
@@ -174,7 +174,7 @@
 	}
 
 	h1 {
-		margin-block: var(--space-xl);
+		margin-block-end: var(--space-xl);
 		font-size: var(--step-5);
 		line-height: var(--line-height-xs);
 	}
@@ -254,10 +254,27 @@
 	a:visited:hover {
 		color: var(--link-visited-hover);
 	}
+
+	[role=list] {
+		padding: 0;
+		list-style: none;
+	}
+}
+
+@layer layout {
+	[data-layout=cluster] {
+		gap: var(--space, var(--space-m));
+		align-items: center;
+		flex-wrap: wrap;
+
+		display: flex;
+	}
 }
 
 @layer utility {
 	.flow > * + * {
 		margin-block-start: var(--space, var(--space-m));
 	}
+
+	.mbs-xl { margin-block-start: var(--space-xl); }
 }

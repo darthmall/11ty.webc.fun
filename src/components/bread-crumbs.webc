@@ -1,0 +1,12 @@
+<nav class="mbs-xl">
+	<ul data-layout="cluster" role="list" style="--space: var(--space-xs)">
+		<li data-layout="cluster">
+			<a href="/">Home</a>
+			<chevrons-right></chevrons-right>
+		</li>
+		<li data-layout="cluster">
+			<a href="/recipes/">Recipes</a>
+			<chevrons-right></chevrons-right>
+		</li>
+	</ul>
+</nav>
