@@ -21,7 +21,7 @@
 		height: calc(100% + (var(--space-l) * 2));
 		aspect-ratio: var(--ratio-square);
 
-		background-image: var(--gradient-15);
+		background-image: var(--gradient);
 	}
 
 	h1,

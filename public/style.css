@@ -105,6 +105,7 @@
 		--text-3-light: var(--gray-9);
 		--link-light: var(--blue-9);
 		--link-visited-light: var(--grape-7);
+		--gradient-light: var(--gradient-15);
 
 		--surface-1-dark: var(--gray-9);
 		--surface-2-dark: var(--gray-8);
@@ -115,6 +116,7 @@
 		--text-3-dark: var(--gray-3);
 		--link-dark: var(--blue-4);
 		--link-visited-dark: var(--grape-4);
+		--gradient-dark: var(--gradient-3);
 
 		--surface-1: var(--surface-1-light);
 		--surface-2: var(--surface-2-light);
@@ -125,6 +127,7 @@
 		--text-3: var(--text-3-light);
 		--link: var(--link-light);
 		--link-visited: var(--link-visited-light);
+		--gradient: var(--gradient-light);
 	}
 
 	@media screen and (prefers-color-scheme: dark) {
@@ -138,6 +141,7 @@
 			--text-3: var(--text-3-dark);
 			--link: var(--link-dark);
 			--link-visited: var(--link-visited-dark);
+			--gradient: var(--gradient-dark);
 		}
 	}
 }
