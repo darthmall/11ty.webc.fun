@@ -241,6 +241,12 @@
 		overflow-inline: auto;
 	}
 
+	:not(pre) > code {
+		background-color: var(--surface-3);
+		border-radius: var(--radius-2);
+		padding: 0.125em 0.5em;
+	}
+
 	a {
 		color: var(--link, inherit);
 		transition: color 200ms linear;
