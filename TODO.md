@@ -4,7 +4,7 @@
 - [x] Style figures
 - [x] Dark theme
 - [x] Navigation
-- [ ] Dynamic page titles
+- [x] Dynamic page titles
 - [ ] Skip to content
 
 - [ ] Colophon
