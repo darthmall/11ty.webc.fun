@@ -20,7 +20,10 @@
 </head>
 
 <body>
-  <template @html="this.content" webc:nokeep></template>
+  <a href="#skip">Skip to content</a>
+  <main>
+    <template @html="this.content" webc:nokeep></template>
+  </main>
   <site-foot webc:nokeep />
 </body>
 

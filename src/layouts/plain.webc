@@ -5,6 +5,6 @@ layout: ./base.webc
 <article>
 	<bread-crumbs></bread-crumbs>
 	<h1 @html="this.title"></h1>
-	<template @html="this.content" webc:nokeep></template>
+	<div id="skip" @html="this.content" tabindex="-1"></div>
 </article>
 

@@ -10,7 +10,7 @@ layout: ./base.webc
 	<p @html="this.site.description"></p>
 </hero-block>
 
-<article @html="this.content"></article>
+<article id="skip" tabindex="-1" @html="this.content"></article>
 
 <h2>Recently Updated</h2>
 <card-carousel @tag="recipe"></card-carousel>
