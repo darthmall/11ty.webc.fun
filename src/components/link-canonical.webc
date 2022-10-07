@@ -1,0 +1,6 @@
+<script webc:type="render" webc:is="template">
+	function () {
+		const canonical = new URL(this.page.url, this.site.url);
+		return `<link rel="canonical" href="${canonical.toString()}">`;
+	}
+</script>

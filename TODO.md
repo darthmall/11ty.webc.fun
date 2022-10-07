@@ -8,7 +8,7 @@
 - [x] Inline `<code>` formatting
 - [x] Skip to content
 - [x] Eleventy generator tag
-- [ ] Social meta stuff
+- [x] Social meta stuff
 - [ ] Focus styles
 
 - [ ] Colophon

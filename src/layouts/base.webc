@@ -8,9 +8,10 @@
 
 	<title webc:is="meta-title"></title>
 
-  <meta name="author" content="W. Evan Sheehan">
-  <meta name="description" :content="this.site.description">
+  <meta webc:is="meta-social"></meta>
   <meta name="generator" :content="this.eleventy.generator">
+
+  <link webc:is="link-canonical">
 
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
