@@ -1,6 +1,6 @@
 ---
 title: Looping with Render Functions
-description: Use loops! Save your wrists!
+description: Did you know that too much copying and pasting wears out your operating system’s clipboard? Extend the life of your OS by using loops!
 ---
 
 Unless you really like copying and pasting, you’re probably going to want to write some loops in your HTML templates.
