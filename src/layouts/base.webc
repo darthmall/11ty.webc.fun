@@ -10,6 +10,7 @@
 
   <meta name="author" content="W. Evan Sheehan">
   <meta name="description" :content="this.site.description">
+  <meta name="generator" :content="this.eleventy.generator">
 
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>

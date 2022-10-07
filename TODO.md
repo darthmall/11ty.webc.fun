@@ -7,7 +7,7 @@
 - [x] Dynamic page titles
 - [x] Inline `<code>` formatting
 - [x] Skip to content
-- [ ] Eleventy generator tag
+- [x] Eleventy generator tag
 - [ ] Social meta stuff
 - [ ] Focus styles
 
