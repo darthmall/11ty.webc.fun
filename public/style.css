@@ -238,7 +238,7 @@
 	}
 
 	pre {
-		overflow-inline: auto;
+		overflow-x: auto;
 	}
 
 	:not(pre) > code {
