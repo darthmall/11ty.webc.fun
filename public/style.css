@@ -264,6 +264,22 @@
 		color: var(--link-visited-hover);
 	}
 
+	:is(a, button, input, textarea):focus {
+		outline: 0.25em solid var(--link-hover);
+		outline-offset: 0.25em;
+		border-radius: var(--radius-1);
+	}
+
+	:is(a, button, input, textarea):focus:not(:focus-visible) {
+		outline: none;
+	}
+
+	:is(a, button, input, textarea):focus-visible {
+		outline: 0.25em solid var(--link-hover);
+		outline-offset: 0.25em;
+		border-radius: var(--radius-1);
+	}
+
 	[id] {
 		scroll-margin-top: 2ex;
 	}
@@ -289,7 +305,6 @@
 	}
 
 	[href="#skip"]:focus {
-		outline: var(--space-xs) solid var(--link-hover);
 		outline-offset: 0;
 		transform: translate(-50%, 0);
 		top: var(--space-m);

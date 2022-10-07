@@ -9,7 +9,7 @@
 - [x] Skip to content
 - [x] Eleventy generator tag
 - [x] Social meta stuff
-- [ ] Focus styles
+- [x] Focus styles
 
 - [ ] Colophon
 - [ ] Format HTML
