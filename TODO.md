@@ -5,6 +5,7 @@
 - [x] Dark theme
 - [x] Navigation
 - [x] Dynamic page titles
+- [ ] Inline `<code>` formatting
 - [ ] Skip to content
 
 - [ ] Colophon
