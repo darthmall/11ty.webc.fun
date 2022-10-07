@@ -5,8 +5,10 @@
 - [x] Dark theme
 - [x] Navigation
 - [x] Dynamic page titles
-- [ ] Inline `<code>` formatting
+- [x] Inline `<code>` formatting
 - [ ] Skip to content
+- [ ] Eleventy generator tag
+- [ ] Social meta stuff
 
 - [ ] Colophon
 - [ ] Format HTML
