@@ -6,9 +6,10 @@
 - [x] Navigation
 - [x] Dynamic page titles
 - [x] Inline `<code>` formatting
-- [ ] Skip to content
+- [x] Skip to content
 - [ ] Eleventy generator tag
 - [ ] Social meta stuff
+- [ ] Focus styles
 
 - [ ] Colophon
 - [ ] Format HTML
