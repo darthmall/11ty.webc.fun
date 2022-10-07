@@ -11,6 +11,6 @@
 - [x] Social meta stuff
 - [x] Focus styles
 
-- [ ] Colophon
+- [x] Colophon
 - [ ] Format HTML
 - [ ] Convert RSS feed to a WebC template

@@ -1,0 +1,32 @@
+---
+title: Colophon
+description: For the nerds
+layout: base.webc
+---
+
+<hero-block>
+	<template slot="title" @html="this.title" webc:nokeep></template>
+	<p @html="this.description"></p>
+</hero-block>
+
+<article id="skip" tabindex="-1">
+	<template webc:type="11ty" 11ty:type="md">
+
+## Built with
+
+[11ty](https://11ty.dev/) and [WebC](https://github.com/11ty/webc/), obviously.
+Colors, shadows, and blobs are from [Open Props](https://open-props.style/). And
+the type scale was built with [Utopia](https://utopia.fyi).
+
+## Fonts
+
+The hero text is [Getai Grotesk
+Display](https://deathoftypography.com/getai-grotesk-display/) by Death of
+Typography. Heading and body copy are [Atkinson
+Hyperlegible](https://brailleinstitute.org/freefont) courtesy of the Braille
+Institute.
+
+[Back to the home page](/).
+
+	</template>
+</article>

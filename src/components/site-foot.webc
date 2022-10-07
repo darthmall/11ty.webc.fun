@@ -1,8 +1,8 @@
 <footer>
 	<p>
-		<copyright></copyright> Built with <a href="https://11ty.dev/">11ty</a>,
-		<a href="https://github.com/11ty/webc/">WebC</a>, and
-		<a href="https://open-props.style/">Open Props</a>.
+		<copyright></copyright>
+		View on <a href="https://github.com/darthmall/11ty.webc.fun/">GitHub</a>.
+		<a href="/colophon/">Colophon</a>.
 	</p>
 </footer>
 
