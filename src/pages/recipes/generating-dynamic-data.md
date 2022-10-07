@@ -1,6 +1,6 @@
 ---
 title: Dynamically Generating Content
-description: Save yourself the trouble of having to update your copyright every with this one weird trick!
+description: Save yourself the trouble of having to update your copyright every year with this one weird trick!
 ---
 
 Chances are there are at least two things on your website that you’ll want to generate dynamically:
