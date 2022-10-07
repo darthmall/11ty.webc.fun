@@ -197,7 +197,9 @@
 		max-width: 60ch;
 	}
 
-	p + p {
+	p + p,
+	* + ul,
+	* + ol {
 		margin-block-start: var(--space-s);
 	}
 
