@@ -233,6 +233,7 @@
 	blockquote {
 		font-size: var(--step-3);
 		font-style: italic;
+		line-height: var(--line-height-s);
 		color: var(--text-2);
 	}
 
