@@ -1,5 +1,6 @@
 ---
 layout: home.webc
+eleventyExcludeFromCollections: true
 ---
 
 > The proof of the pudding is in the eating.

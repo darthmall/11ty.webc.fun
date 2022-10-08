@@ -3,6 +3,7 @@ title: Recipes
 description: Simple solutions to common problems when building websites with Eleventy and WebC.
 layout: base.webc
 override:tags: []
+eleventyExcludeFromCollections: true
 ---
 
 <nav class="mbs-xl" style="--space: var(--space-xs)">
