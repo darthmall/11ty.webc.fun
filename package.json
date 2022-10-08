@@ -6,7 +6,7 @@
   "scripts": {
     "build": "eleventy",
     "clean": "rm -rf _site",
-    "start": "eleventy --serve"
+    "start": "npm run clean && eleventy --serve"
   },
   "author": "W. Evan Sheehan <wally.es@proton.me>",
   "license": "AGPL-3.0-or-later",
