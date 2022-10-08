@@ -1,12 +1,12 @@
 @layer reset, props, config, default, layout, utility;
 
-@import "https://unpkg.com/open-props/aspects.min.css" layer(props);
-@import "https://unpkg.com/open-props/borders.min.css" layer(props);
-@import "https://unpkg.com/open-props/gradients.min.css" layer(props);
-@import "https://unpkg.com/open-props/shadows.min.css" layer(props);
-@import "https://unpkg.com/open-props/gray.min.css" layer(props);
-@import "https://unpkg.com/open-props/blue.min.css" layer(props);
-@import "https://unpkg.com/open-props/grape.min.css" layer(props);
+@import "open-props/aspects.min.css" layer(props);
+@import "open-props/borders.min.css" layer(props);
+@import "open-props/gradients.min.css" layer(props);
+@import "open-props/shadows.min.css" layer(props);
+@import "open-props/gray.min.css" layer(props);
+@import "open-props/blue.min.css" layer(props);
+@import "open-props/grape.min.css" layer(props);
 
 @font-face {
 	font-family: "Atkinson Hyperlegible";

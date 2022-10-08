@@ -1,6 +1,7 @@
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const pluginWebC = require("@11ty/eleventy-plugin-webc");
 const postcss = require("postcss");
+const atImport = require("postcss-import");
 
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRSS);
@@ -12,7 +13,7 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addExtension("css", {
 		outputFileExtension: "css",
 		compile: async function (inputContent) {
-			const result = await postcss().process(inputContent);
+			const result = await postcss([atImport]).process(inputContent);
 
 			return async () => result.css;
 		},
