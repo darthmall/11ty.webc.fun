@@ -9,7 +9,11 @@ insert_final_newline = true
 max_line_length = 80
 trim_trailing_whitespace = true
 
-[*.{md,toml}]
+[*.md]
+indent_size = 4
+max_line_length = 0
+
+[*.toml]
 indent_size = 4
 
 [*.py]
