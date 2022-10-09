@@ -1,3 +1,13 @@
+## Recipes
+- [ ] Styling a light DOM single-file component
+- [ ] Web components with Shadow DOM
+- [ ] Progressive enhancment for web components with slots
+
+## Misc.
+- [ ] Format HTML
+- [ ] Convert RSS feed to a WebC template
+
+## Completed
 - [x] RSS Feed
 - [x] Typography
 - [x] Recent Posts
@@ -10,7 +20,4 @@
 - [x] Eleventy generator tag
 - [x] Social meta stuff
 - [x] Focus styles
-
 - [x] Colophon
-- [ ] Format HTML
-- [ ] Convert RSS feed to a WebC template
