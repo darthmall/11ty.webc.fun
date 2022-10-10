@@ -127,7 +127,7 @@ The final result of combining <samp>index.md</samp>, <samp>main.webc</samp>, and
       <h1>Heading</h1>
       <p>Lorem ipsum…</p>
     </main>
-    <footer></footer>
+    <footer>...</footer>
   </body>
 </html>
 ```
