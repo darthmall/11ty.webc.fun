@@ -1,4 +1,4 @@
-<footer>
+<footer webc:root webc:keep>
 	<p>
 		<copyright></copyright>
 		View on <a href="https://github.com/darthmall/11ty.webc.fun/">GitHub</a>.
@@ -7,12 +7,7 @@
 	</p>
 </footer>
 
-<!--
-	FIXME: Have to use webc:keep here because for some reason these styles
-	aren't being aggregated into the header style tag. Hopefully that's a bug,
-	because providing component styles like this would be really handy.
--->
-<style webc:keep>
+<style>
 	footer {
 		margin-block-start: auto;
 		padding-block: var(--space-xl);
@@ -30,5 +25,4 @@
 
 		background-color: var(--surface-4);
 	}
-
 </style>

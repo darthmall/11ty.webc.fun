@@ -2,6 +2,7 @@
 - [ ] Styling a light DOM single-file component
 - [ ] Web components with Shadow DOM
 - [ ] Progressive enhancment for web components with slots
+- [ ] `webc:root webc:keep` trick for light DOM SFCs
 
 ## Misc.
 - [ ] Format HTML
