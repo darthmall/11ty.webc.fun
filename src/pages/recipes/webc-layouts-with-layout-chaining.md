@@ -92,7 +92,7 @@ layout: root.webc
 <figcaption>main.webc</figcaption>
 </figure>
 
-In the above example, we create a template — <samp>root.webc</samp> — that contains all of our HTML boilerplate: doctype, metadata, <i>etc.</i>.
+In the above example, we create a template — <samp>root.webc</samp> — that contains all of our HTML boilerplate: doctype, metadata, <i>etc.</i>
 Then we create a template — <samp>main.webc</samp> — that provides the scaffolding for our site: the site header, a main section, and the site footer.
 <samp>main.webc</samp> uses <samp>root.webc</samp> as its layout so that it will get wrapped inside of the `<body>` tag with all the necessary boilerplate around it.
 
