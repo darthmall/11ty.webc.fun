@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: root.webc
+---
 
-<head>
-	<meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta name="color-scheme" content="light dark">
-
-	<title webc:is="meta-title"></title>
-
-  <meta webc:is="meta-social"></meta>
-  <meta name="generator" :content="this.eleventy.generator">
-
-  <link webc:is="link-canonical">
-
-  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/AtkinsonHyperlegible-Italic.woff2" as="font" type="font/woff2" crossorigin>
-
-  <link rel="stylesheet" href="/style.css" webc:raw>
-  <style @html="this.getCSS(this.page.url)"></style>
-  <script @html="this.getJS(this.page.url)"></script>
-</head>
-
-<body>
-  <a href="#skip">Skip to content</a>
-  <main>
-    <template @html="this.content" webc:nokeep></template>
-  </main>
-  <site-foot webc:nokeep />
-</body>
-
-</html>
+<a href="#skip">Skip to content</a>
+<main>
+	<template @html="this.content" webc:nokeep></template>
+</main>
+<site-foot webc:nokeep></site-foot>
