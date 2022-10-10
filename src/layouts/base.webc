@@ -6,4 +6,4 @@ layout: root.webc
 <main>
 	<template @html="this.content" webc:nokeep></template>
 </main>
-<site-foot webc:nokeep></site-foot>
+<site-foot></site-foot>
