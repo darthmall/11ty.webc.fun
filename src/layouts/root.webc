@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="/style.css" webc:raw>
   <style @html="this.getCSS(this.page.url)"></style>
   <script @html="this.getJS(this.page.url)"></script>
+
+	<link rel="alternate" href="/feed.xml" type="application/rss+xml">
 </head>
 
 <body @html="this.content"></body>
