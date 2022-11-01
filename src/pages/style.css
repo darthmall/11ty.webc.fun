@@ -193,6 +193,7 @@
 		line-height: var(--line-height-s);
 	}
 
+	aside,
 	p {
 		max-width: 60ch;
 	}
@@ -203,6 +204,7 @@
 		margin-block-start: var(--space-s);
 	}
 
+	aside,
 	blockquote,
 	figure {
 		margin-block: var(--space-l);
@@ -220,14 +222,21 @@
 		padding: var(--space-m);
 	}
 
+	aside,
+	figcaption {
+		font-size: var(--step--1);
+		background-color: var(--surface-3);
+	}
+
 	figcaption {
 		margin-block-start: var(--space-xs);
-		border-block-start: var(--border-size-1) solid var(--surface-4);
 		padding-block: var(--space-xs);
+		border-block-start: var(--border-size-1) solid var(--surface-4);
+	}
 
-		font-size: var(--step--1);
-
-		background-color: var(--surface-3);
+	aside {
+		padding: var(--space-m);
+		border-radius: var(--radius-2);
 	}
 
 	blockquote {
