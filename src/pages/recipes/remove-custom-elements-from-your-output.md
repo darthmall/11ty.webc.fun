@@ -110,7 +110,7 @@ Add both of these attributes to the root `<div>`.
 <figure>
 
 ```html
-<div class="hero" webc:root webc:nokeep>
+<div class="hero" webc:root webc:keep>
   <slot name="image"></slot>
   <h1><slot name="title"></slot></h1>
 </div>
