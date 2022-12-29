@@ -7,7 +7,11 @@
 
 			return collection.map((page) => `<article>
 					<a href="${page.url}">${page.data.title}</a>
-					<p>${page.data.description}</p>
+					<p>
+						<strong>Updated:</strong>
+						<time datetime="${page.date.toISOString}">${page.date.toLocaleDateString()}</time>.
+						${page.data.description}
+					</p>
 				</article>`)
 				.join("");
 		}
