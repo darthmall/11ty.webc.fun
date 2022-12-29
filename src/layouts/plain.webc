@@ -4,7 +4,10 @@ layout: ./base.webc
 
 <article>
 	<bread-crumbs></bread-crumbs>
-	<h1 @html="this.title"></h1>
+	<header>
+		<h1 @html="this.title"></h1>
+		<p>Updated: <time :datetime="this.page.date.toISOString()" @html="this.page.date.toLocaleDateString()"></time></p>
+	</header>
 	<div id="skip" @html="this.content" tabindex="-1"></div>
 </article>
 
