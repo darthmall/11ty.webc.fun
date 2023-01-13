@@ -4,6 +4,6 @@ layout: root.webc
 
 <a href="#skip">Skip to content</a>
 <main>
-	<template @html="this.content" webc:nokeep></template>
+	<template @html="content" webc:nokeep></template>
 </main>
 <site-foot></site-foot>

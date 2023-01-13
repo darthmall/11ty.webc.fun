@@ -10,7 +10,7 @@
 	<title webc:is="meta-title"></title>
 
   <meta webc:is="meta-social"></meta>
-  <meta name="generator" :content="this.eleventy.generator">
+  <meta name="generator" :content="eleventy.generator">
 
   <link webc:is="link-canonical">
 
@@ -19,12 +19,12 @@
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Italic.woff2" as="font" type="font/woff2" crossorigin>
 
   <link rel="stylesheet" href="/style.css" webc:raw>
-  <style @html="this.getCSS(this.page.url)"></style>
-  <script @html="this.getJS(this.page.url)"></script>
+  <style @raw="getCSS(page.url)" webc:keep></style>
+  <script @raw="getJS(page.url)"webc:keep></script>
 
 	<link rel="alternate" href="/feed.xml" type="application/rss+xml">
 </head>
 
-<body @html="this.content"></body>
+<body @html="content"></body>
 
 </html>
