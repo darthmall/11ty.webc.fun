@@ -13,4 +13,4 @@ layout: ./base.webc
 <article id="skip" tabindex="-1" @html="this.content"></article>
 
 <h2>Recently Updated</h2>
-<card-carousel @tag="recipe"></card-carousel>
+<card-carousel tag="recipe"></card-carousel>

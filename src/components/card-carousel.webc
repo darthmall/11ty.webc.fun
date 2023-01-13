@@ -1,20 +1,18 @@
 <div class="flow" style="--space: var(--space-l)">
-	<script webc:type="render" webc:is="template">
-		function () {
-			let collection = this.collections[this.tag];
+	<script webc:type="js" webc:is="template">
+		let collection = collections[tag];
 
-			if (this.limit) collection = collection.slice(0, this.limit);
+		if (limit) collection = collection.slice(0, limit);
 
-			return collection.map((page) => `<article>
-					<a href="${page.url}">${page.data.title}</a>
-					<p>
-						<strong>Updated:</strong>
-						<time datetime="${page.date.toISOString}">${page.date.toLocaleDateString()}</time>.
-						${page.data.description}
-					</p>
-				</article>`)
-				.join("");
-		}
+		collection.map((page) => `<article>
+				<a href="${page.url}">${page.data.title}</a>
+				<p>
+					<strong>Updated:</strong>
+					<time datetime="${page.date.toISOString}">${page.date.toLocaleDateString()}</time>.
+					${page.data.description}
+				</p>
+			</article>`)
+			.join("");
 	</script>
 </div>
 
