@@ -3,14 +3,14 @@ layout: ./base.webc
 ---
 
 <hero-block>
-	<template slot="title" webc:nokeep>
+	<h1>
 		11ty &amp;<br>
 		WebC
-	</template>
-	<p @html="this.site.description"></p>
+	</h1>
+	<p @raw="site.description"></p>
 </hero-block>
 
-<article id="skip" tabindex="-1" @html="this.content"></article>
+<article id="skip" tabindex="-1" @html="content"></article>
 
 <h2>Recently Updated</h2>
 <card-carousel tag="recipe"></card-carousel>
