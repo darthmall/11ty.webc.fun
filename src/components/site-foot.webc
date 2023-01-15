@@ -10,15 +10,15 @@
 		</p>
 </footer>
 
-<style>
-	footer {
+<style webc:scoped>
+	:host {
 		margin-block-start: auto;
 		padding-block: var(--space-xl);
 
 		font-size: var(--step--1);
 	}
 
-	footer::before {
+	:host::before {
 		display: block;
 		content: "";
 

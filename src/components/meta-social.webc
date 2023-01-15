@@ -1,10 +1,8 @@
-<script webc:type="render" webc:is="template">
-	function () {
-		const description = this.description ?? this.site.description;
-		const title = this.title ?? this.site.title;
+<script webc:type="js" webc:is="template">
+	const descText = description ?? site.description;
+	const titleText = title ?? site.title;
 
-		return `<meta property="og:title" content="${title}">
-		<meta name="description" property="og:description" content="${description}">
-		<meta name="author" content="${this.site.author.name}">`;
-	}
+	`<meta property="og:title" content="${titleText}">
+		<meta name="description" property="og:description" content="${descText}">
+		<meta name="author" content="${site.author.name}">`;
 </script>

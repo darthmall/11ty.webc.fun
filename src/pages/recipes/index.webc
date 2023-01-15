@@ -16,4 +16,4 @@ eleventyExcludeFromCollections: true
 </nav>
 <h1>Recipes</h1>
 
-<card-carousel @tag="recipe"></card-carousel>
+<card-carousel tag="recipe"></card-carousel>

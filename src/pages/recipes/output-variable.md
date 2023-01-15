@@ -14,31 +14,53 @@ Coming from some of Eleventy’s other template languages, you’re probably use
 <figcaption>Syntax to write the contents of the <code>title</code> variable in a Liquid or Nunjucks template.</figcaption>
 </figure>
 
-The equivalent in WebC is a `<template>` with an `@html` property.
+The equivalent in WebC is a `<template>` with an `@text` property.
 
 <figure>
 
 ```html
-<template @html="this.title" webc:nokeep></template>
+<template @text="title" webc:nokeep></template>
 ```
 
 <figcaption>Syntax to write the contents of the <code>title</code> variable in WebC.</figcaption>
 </figure>
 
-`@html` is a special property in [WebC for setting the inner HTML](https://github.com/11ty/webc#setting-html) of an element from data.
-All of the data from the [data cascade](https://www.11ty.dev/docs/data-cascade/) — or data that you provide to the component — is available on `this`.
+`@text` is a special property in [WebC for setting the text](https://github.com/11ty/webc#setting-text) of an element from data.
 `webc:nokeep` tells WebC to discard the tag once it’s done processing it, so that our variable contents don’t end up wrapped in a `<template>` tag in our final markup.
 
-## Escape your own HTML
+WebC escapes strings when used with `@text` the same way that Nunjucks escapes strings by default. So if your `title` variable contains the string “1&lt;sup>st&lt;/sup>”, WebC will write out `1&lt;sup&gt;st&lt;/sup&gt;`.
 
-Other template engines like Nunjucks automatically escape your HTML for you.
-This means if you have a variable containing the string <q>&lt;strong&gt;Hi!&lt;/strong&gt;</q>, Nunjucks will replace the <q>&lt;</q> and <q>&gt;</q> with `&lt;` and `&gt;` so that the string is not interpreted as HTML when it’s rendered in a browser.
-If you want to tell Nunjucks _not_ to escape the HTML, you use the `safe` filter.
-You’re probably familiar with this from your layout templates where you have to write `{{ content | safe }}` so that the processed Markdown from your page templates is interpreted as HTML in the final output.
+## Writing Unescaped HTML
 
-WebC does _not_ escape your variables automatically.
-Passing a string of HTML to the `@html` property will render as HTML in the final output.
-This means you don’t have to mark variables as <q>safe</q> if they contain markup, but it means if you have markup you want displayed on the page verbatim, you’ll need to escape it yourself first.
+With Nunjucks, you can use the `safe` filter to prevent the value from being escaped.
 
-If you’re using backticks (<code>`</code>) in your Markdown, you don’t have to escape anything.
-Markdown escapes it for you before it gets to your layout templates.
+
+<figure>
+
+```jinja
+{{ title | safe }}
+```
+
+<figcaption>Syntax to write the contents of the <code>title</code> variable in a Nunjucks template without escaping any characters.</figcaption>
+</figure>
+
+In WebC we can use either the `@raw` or the `@html` properties.
+The `@raw` property is the most similar to `safe`, so let’s begin there.
+
+<figure>
+
+```html
+<template @raw="title" webc:nokeep></template>
+```
+
+<figcaption>Syntax to write the contents of the <code>title</code> variable in WebC without escaping any characters.</figcaption>
+</figure>
+
+Given our previous example of a `title` variable containing the text “1&lt;sup>st&lt;/sup>”, the above template in WebC would preserve the HTML in our output.
+
+### Processing WebC Components in the Output
+
+The other property that passes text through unescaped is `@html`.
+The difference between `@raw` and `@html` is that `@html` will run the output through WebC again.
+So, if you have a variable — <i>e.g.</i> the `content` variable that Eleventy provides when it parses your templates — that may have WebC components in it, you’ll want to use `@html`, not `@raw`.
+This is why we used `@html` in the [layout chaining](/recipes/webc-layouts-with-layout-chaining/) recipe.

@@ -17,20 +17,18 @@ Render functions to the rescue!
 <figure>
 
 ```html
-<script webc:type="render" webc:is="template">
-  function () {
-    let title;
+<script webc:type="js" webc:is="template">
+  let metaTitle;
 
-    if (this.title) {
-      // If the current page has a title, put it before the site title
-      title = `${this.title} — ${this.site.title}`;
-    } else {
-      // If the current page has no title, just put the site title
-      title = this.site.title;
-    }
-
-    return `<title>${title}</title>`;
+  if (title) {
+    // If the current page has a title, put it before the site title
+    metaTitle = `${title} — ${site.title}`;
+  } else {
+    // If the current page has no title, just put the site title
+    metaTitle = site.title;
   }
+
+  `<title>${metaTitle}</title>`;
 </script>
 ```
 

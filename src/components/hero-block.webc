@@ -1,5 +1,4 @@
-<h1><slot name="title"></slot></h1>
-<div class="body"><slot></slot></div>
+<slot></slot>
 <div class="blob"></div>
 
 <style webc:scoped>
@@ -11,7 +10,7 @@
 		padding: var(--space-xl);
 	}
 
-	.blob {
+	:host .blob {
 		position: absolute;
 		left: calc(var(--space-l) * -1);
 		top: calc(var(--space-l) * -1);
@@ -24,22 +23,22 @@
 		background-image: var(--gradient);
 	}
 
-	h1,
-	.body {
+	:host h1,
+	:host p {
 		position: relative;
 		z-index: 2;
 	}
 
-	h1 {
+	:host h1 {
 		margin-block: 0;
 		font-family: var(--font-display);
 	}
 
-	.body {
+	:host p {
 		font-size: var(--step-1);
 	}
 
-	.body > * {
+	:host p > * {
 		font: inherit;
 	}
 </style>
