@@ -25,7 +25,7 @@
 	<link rel="alternate" href="/feed.xml" type="application/rss+xml">
 </head>
 
-<body @html="content">
+<body>
   <a href="#skip">Skip to content</a>
   <main>
     <template @html="content" webc:nokeep></template>
