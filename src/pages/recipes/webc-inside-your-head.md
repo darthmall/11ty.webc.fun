@@ -22,13 +22,13 @@ Render functions to the rescue!
 
   if (title) {
     // If the current page has a title, put it before the site title
-    title = `${title} — ${site.title}`;
+    metaTitle = `${title} — ${site.title}`;
   } else {
     // If the current page has no title, just put the site title
-    title = site.title;
+    metaTitle = site.title;
   }
 
-  `<title>${title}</title>`;
+  `<title>${metaTitle}</title>`;
 </script>
 ```
 
