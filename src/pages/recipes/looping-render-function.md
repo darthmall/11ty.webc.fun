@@ -20,14 +20,12 @@ Let’s start simple.
 
 ```html
 <ul>
-  <script webc:type="render" webc:is="template">
-    function () {
-      return this.collections.all
-        .map((page) => `<li>
-            <a href="${page.url}>${page.data.title}</a>
-          </li>`)
-        .join("");
-    }
+  <script webc:type="js" webc:is="template">
+    collections.all
+      .map((page) => `<li>
+          <a href="${page.url}>${page.data.title}</a>
+        </li>`)
+      .join("");
   </script>
 </ul>
 ```
@@ -42,18 +40,19 @@ You pass it a tag name, and an optional limit, and it produces `<article>` tags 
 <figure>
 
 ```html
-<script webc:type="render" webc:is="template">
-  function () {
-    let collection = this.collections[this.tag];
+<script webc:type="js" webc:is="template">
+  // Copy the collection because Array.prototype.reverse() reverses the array
+  // in-place, and we don't want to permanently reverse the collection, we just
+  // want to reverse it for this component.
+  let collection = [...collections[tag]].reverse();
 
-    if (this.limit) collection = collection.slice(0, this.limit);
+  if (limit) collection = collection.slice(0, limit);
 
-    return collection.map((page) => `<article>
-        <a href="${page.url}">${page.data.title}</a>
-        <p>${page.data.description}</p>
-      </article>`)
-      .join("");
-  }
+  collection.map((page) => `<article>
+      <a href="${page.url}">${page.data.title}</a>
+      <p>${page.data.description}</p>
+    </article>`)
+  .join("");
 </script>
 ```
 
@@ -67,7 +66,7 @@ This component is then used on the home page to render links out to all of the t
 
 ```html
 <h2>Techniques</h2>
-<collection-list @tag="technique"></collection-list>
+<collection-list tag="technique" limit="3"></collection-list>
 ```
 
 <figcaption>home.webc</figcaption>
