@@ -1,6 +1,6 @@
 <div class="flow" style="--space: var(--space-l)">
 	<script webc:type="js" webc:is="template">
-		let collection = collections[tag];
+		let collection = [...collections[tag]].reverse();
 
 		if (limit) collection = collection.slice(0, limit);
 
