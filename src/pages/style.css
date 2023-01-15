@@ -343,4 +343,5 @@
 	}
 
 	.mbs-xl { margin-block-start: var(--space-xl); }
+	.mbs-l { margin-block-start: var(--space-l); }
 }

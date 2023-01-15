@@ -14,3 +14,7 @@ layout: ./base.webc
 
 <h2>Recently Updated</h2>
 <card-carousel tag="recipe" :limit="site.numRecent"></card-carousel>
+
+<div class="mbs-l">
+	<a href="/recipes/">View all recipes</a>
+</div>
