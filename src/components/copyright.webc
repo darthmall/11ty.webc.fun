@@ -1,12 +1,10 @@
-<script webc:type="render" webc:is="template">
-	function() {
-		const now = new Date();
-		let author = this.site.author.name;
+<script webc:type="js" webc:is="template">
+	const now = new Date();
+	let author = site.author.name;
 
-		if (this.site.author.url) {
-			author = `<a href="${this.site.author.url}">${author}</a>`;
-		}
-
-		return `&copy; ${now.getFullYear()} ${author}.`;
+	if (site.author.url) {
+		author = `<a href="${site.author.url}">${author}</a>`;
 	}
+
+	`&copy; ${now.getFullYear()} ${author}.`;
 </script>
