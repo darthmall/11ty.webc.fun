@@ -4,7 +4,7 @@ description: How to create and reuse WebC layouts for your site.
 ---
 
 WebC can be used for [layouts](https://www.11ty.dev/docs/layouts/) in your Eleventy site.
-You simply write your HTML and then add `@html="this.content"` to whatever element you want to contain the page content.
+You simply write your HTML and then add `@html="content"` to whatever element you want to contain the page content.
 
 <figure>
 
@@ -12,7 +12,7 @@ You simply write your HTML and then add `@html="this.content"` to whatever eleme
 <!doctype html>
 <html>
   <head>...</head>
-  <body @html="this.content"></body>
+  <body @html="content"></body>
 </html>
 ```
 
@@ -40,7 +40,7 @@ When Eleventy builds your site, it will process <samp>index.md</samp> in the usu
 First, it processes the frontmatter.
 Then it processes the Markdown into HTML.
 Then it passes all of that as data to the layout it found in your frontmatter.
-The HTML generated from the Markdown is provided to the layout in the `content` variable, which, in WebC, is available on `this.content`.
+The HTML generated from the Markdown is provided to the layout in the `content` variable, which, in WebC, is available on `content`.
 
 This is the result:
 
@@ -71,7 +71,7 @@ In fact, since WebC doesn’t really have template inheritance like Nunjucks and
 <!doctype html>
 <html>
   <head>...</head>
-  <body @html="this.content"></body>
+  <body @html="content"></body>
 </html>
 ```
 
@@ -85,7 +85,7 @@ In fact, since WebC doesn’t really have template inheritance like Nunjucks and
 layout: root.webc
 ---
 <header>...</header>
-<main @html="this.content"></main>
+<main @html="content"></main>
 <footer>...</footer>
 ```
 
