@@ -79,7 +79,7 @@ We’d rather it be removed as if the component were an HTML-only component.
 We have two choices for how to remove the `<hero-block>` element:
 
 1. Add `webc:nokeep` to the `<hero-block>` element
-2. Add `webc:root webc:keep` to the `<div>` in our hero component
+2. Add `webc:root="override"` to the `<div>` in our hero component
 
 ## Explicitly remove the custom element
 
@@ -104,13 +104,13 @@ Forgetting to add the attribute could result in our layouts getting messed up be
 ## Automatically remove custom elements
 
 We can also configure our hero component so that WebC automatically removes the custom elements anywhere it’s used.
-For this, we need two WebC attributes: `webc:root` and `webc:keep`.
+For this, we need the WebC attribute `webc:root="override"`.
 Add both of these attributes to the root `<div>`.
 
 <figure>
 
 ```html
-<div class="hero" webc:root webc:keep>
+<div class="hero" webc:root="override">
   <slot name="image"></slot>
   <h1><slot name="title"></slot></h1>
 </div>
