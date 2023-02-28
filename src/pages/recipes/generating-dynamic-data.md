@@ -11,20 +11,13 @@ In the old days, we’d use a [shortcode](https://www.11ty.dev/docs/shortcodes/)
 But with WebC, we can use… _render functions_!
 We’ll just make a component called `<copyright>` that writes out the copyright information, and use that in our site footer component.
 
-<aside>
-	This recipe continues to use the old <code>webc:type="render"</code> render function instead of the newer <code>webc:type="js"</code> because there appears to be <a href="https://github.com/11ty/webc/issues/100">a bug accessing JavaScript globals</a> in the new render functions.
-	Once this gets sorted out, I’ll update the recipe.
-</aside>
-
 <figure>
 
 ```html
-<script webc:type="render" webc:is="template">
-  function() {
+<script webc:type="js">
     const now = new Date();
-
-    return `&copy; ${now.getFullYear()} Yours Truly.`;
-  }
+    
+    `&copy; ${now.getFullYear()} Yours Truly.`;
 </script>
 ```
 
@@ -54,4 +47,3 @@ If our footer puts the copyright notice inside a paragraph, no problem.
 </figure>
 
 We can just drop our copyright element wherever we need it.
-
