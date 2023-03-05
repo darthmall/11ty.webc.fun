@@ -1,4 +1,4 @@
-<footer webc:root webc:keep>
+<footer webc:root="override">
 	<p>
 		<copyright></copyright>
 		View on <a href="https://github.com/darthmall/11ty.webc.fun/">GitHub</a>.

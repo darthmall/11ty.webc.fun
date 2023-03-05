@@ -1,4 +1,4 @@
-<script webc:type="js" webc:is="template">
+<script webc:type="js">
 	const descText = description ?? site.description;
 	const titleText = title ?? site.title;
 
