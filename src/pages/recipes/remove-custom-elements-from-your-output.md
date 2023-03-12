@@ -16,25 +16,25 @@ Consider this rudimentary hero component:
 
 ```html
 <div class="hero">
-  <slot name="image"></slot>
-  <h1><slot name="title"></slot></h1>
+	<slot name="image"></slot>
+	<h1><slot name="title"></slot></h1>
 </div>
 
 <style>
-  .hero {
-    display: grid;
-    grid-template-areas: hero;
-    place-items: center;
-    aspect-ratio: 1.618;
-  }
+	.hero {
+		display: grid;
+		grid-template-areas: hero;
+		place-items: center;
+		aspect-ratio: 1.618;
+	}
 
-  .hero > * {
-    grid-area: hero;
-  }
+	.hero > * {
+		grid-area: hero;
+	}
 
-  .hero > img {
-    place-self: stretch;
-  }
+	.hero > img {
+		place-self: stretch;
+	}
 </style>
 ```
 
@@ -51,10 +51,10 @@ Because of the `<style>` tag in this component, our final output will include th
 
 ```html
 <hero-block>
-  <div class="hero">
-    <h1><slot name="title"></slot></h1>
-    <div class="image"><slot name="image"></slot></div>
-  </div>
+	<div class="hero">
+		<h1><slot name="title"></slot></h1>
+		<div class="image"><slot name="image"></slot></div>
+	</div>
 </hero-block>
 ```
 
@@ -68,8 +68,8 @@ We’d rather it be removed as if the component were an HTML-only component.
 
 ```html
 <div class="hero">
-  <h1><slot name="title"></slot></h1>
-  <div class="image"><slot name="image"></slot></div>
+	<h1><slot name="title"></slot></h1>
+	<div class="image"><slot name="image"></slot></div>
 </div>
 ```
 
@@ -79,7 +79,7 @@ We’d rather it be removed as if the component were an HTML-only component.
 We have two choices for how to remove the `<hero-block>` element:
 
 1. Add `webc:nokeep` to the `<hero-block>` element
-2. Add `webc:root webc:keep` to the `<div>` in our hero component
+2. Add `webc:root="override"` to the `<div>` in our hero component
 
 ## Explicitly remove the custom element
 
@@ -89,8 +89,8 @@ We can explicitly mark a custom element — or, indeed, any element — for remo
 
 ```html
 <hero-block webc:nokeep>
-  <img src="/img/hypnotoad.gif" alt="The hypnotoad" slot="image">
-  <span slot="title">All Glory to the Hypnotoad</span>
+	<img src="/img/hypnotoad.gif" alt="The hypnotoad" slot="image" />
+	<span slot="title">All Glory to the Hypnotoad</span>
 </hero-block>
 ```
 
@@ -104,19 +104,18 @@ Forgetting to add the attribute could result in our layouts getting messed up be
 ## Automatically remove custom elements
 
 We can also configure our hero component so that WebC automatically removes the custom elements anywhere it’s used.
-For this, we need two WebC attributes: `webc:root` and `webc:keep`.
-Add both of these attributes to the root `<div>`.
+For this, we need to add `webc:root="override"` to our root `<div>`.
 
 <figure>
 
 ```html
-<div class="hero" webc:root webc:keep>
-  <slot name="image"></slot>
-  <h1><slot name="title"></slot></h1>
+<div class="hero" webc:root="override">
+	<slot name="image"></slot>
+	<h1><slot name="title"></slot></h1>
 </div>
 
 <style>
-  /* Styles omitted for brevity */
+	/* Styles omitted for brevity */
 </style>
 ```
 
@@ -128,12 +127,10 @@ This approach guarantees that the custom element — `<hero-block>` — is alway
 ### How it works
 
 The `webc:root` attribute tells WebC to merge this root element with the custom element for the component.
-This is mainly used so that if you have a `class` or `style` attribute set on both the custom element where it is invoked, and on the root element of the component, those attributes will be merged in the output.
-When the root element of the component is merged into the custom element, the root element is discarded.
-But since we also include `webc:keep` on our root element, we force WebC to keep it around.
-So in order to successfully merge the custom element and the root element while retaining the root element, WebC has to discard the custom element.
+This can be used so that if you have a `class` or `style` attribute set on both the custom element where it is invoked, and on the root element of the component, those attributes will be merged in the output.
+When the root element of the component is merged into the custom element, the root element is discarded unless we set it to “override.” With a value of “override,” the `webc:root` attribute will remove the custom element and replace it with the component’s root element.
 
 ## References
 
-- [Override the host component tag](https://www.11ty.dev/docs/languages/webc/#override-the-host-component-tag) in the Eleventy docs
-- [webc:root](https://github.com/11ty/webc#attributes) in the WebC docs
+-   [Override the host component tag](https://www.11ty.dev/docs/languages/webc/#override-the-host-component-tag) in the Eleventy docs
+-   [webc:root](https://github.com/11ty/webc#attributes) in the WebC docs
