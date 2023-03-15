@@ -12,7 +12,7 @@
   <meta webc:is="meta-social" webc:nokeep></meta>
   <meta name="generator" :content="eleventy.generator">
 
-  <link webc:is="link-canonical">
+  <link webc:is="link-canonical" webc:nokeep>
 
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
