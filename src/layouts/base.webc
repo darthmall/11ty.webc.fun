@@ -7,12 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="color-scheme" content="light dark">
 
-	<title webc:is="meta-title"></title>
+	<title webc:is="meta-title" webc:nokeep></title>
 
-  <meta webc:is="meta-social"></meta>
+  <meta webc:is="meta-social" webc:nokeep></meta>
   <meta name="generator" :content="eleventy.generator">
 
-  <link webc:is="link-canonical">
+  <link webc:is="link-canonical" webc:nokeep>
 
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/AtkinsonHyperlegible-Bold.woff2" as="font" type="font/woff2" crossorigin>
