@@ -23,7 +23,7 @@ Let’s start simple.
   <script webc:type="js" webc:is="template">
     collections.all
       .map((page) => `<li>
-          <a href="${page.url}>${page.data.title}</a>
+          <a href="${page.url}">${page.data.title}</a>
         </li>`)
       .join("");
   </script>
