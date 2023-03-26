@@ -7,5 +7,6 @@
 		"email": "darth_mall@pm.me",
 		"url": "https://darthmall.net/"
 	},
-	"numRecent": 3
+	"numRecent": 3,
+	"dateFormat": "d LLLL yyyy"
 }
