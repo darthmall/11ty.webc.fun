@@ -14,7 +14,7 @@
 					</p>
 					<footer>
 						<strong>Updated:</strong>
-						<time datetime="${page.date.toISOString}">${page.date.toLocaleDateString()}</time>.
+						<luxon-time @value="${page.date.toISOString()}" @machine-format="yyyy-LL-dd"></luxon-time>
 					</footer>
 				</div>
 			</article>`)
