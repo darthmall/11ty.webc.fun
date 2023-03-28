@@ -1,7 +1,7 @@
 ---
 title: Recipes
 description: Simple solutions to common problems when building websites with Eleventy and WebC.
-layout: base.webc
+layout: layouts/base.webc
 override:tags: []
 eleventyExcludeFromCollections: true
 ---

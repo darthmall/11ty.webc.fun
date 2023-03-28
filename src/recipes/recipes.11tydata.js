@@ -1,6 +1,6 @@
 let data = {
-	"tags": ["recipe"],
-	"layout": "plain.webc"
+	tags: ["recipe"],
+	layout: "layouts/plain.webc",
 };
 
 if (process.env.ELEVENTY_ENV === "production") {
