@@ -1,6 +1,7 @@
 ---
 title: Dynamically Generating Content
 description: Save yourself the trouble of having to update your copyright every year with this one weird trick!
+date: 2023-02-28
 ---
 
 Sure, you _could_ just write the copyright statement in your site footer template the way we did in the [partials recipe](/recipes/webc-partial/), but then, every year, you have to remember to open up that template in a text editor, change the date, commit the change, and deploy a new version of the site.
@@ -15,9 +16,9 @@ We’ll just make a component called `<copyright>` that writes out the copyright
 
 ```html
 <script webc:type="js">
-    const now = new Date();
-    
-    `&copy; ${now.getFullYear()} Yours Truly.`;
+	const now = new Date();
+
+	`&copy; ${now.getFullYear()} Yours Truly.`;
 </script>
 ```
 
@@ -37,9 +38,9 @@ If our footer puts the copyright notice inside a paragraph, no problem.
 
 ```html
 <footer>
-  <p>
-    <copyright></copyright> Built with <a href="https://11ty.dev/">11ty</a>.
-  </p>
+	<p>
+		<copyright></copyright> Built with <a href="https://11ty.dev/">11ty</a>.
+	</p>
 </footer>
 ```
 

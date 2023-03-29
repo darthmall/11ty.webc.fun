@@ -1,6 +1,7 @@
 ---
 title: Easy Date and Time Formatting with Luxon
 description: Override the &lt;time> element to accept date objects and Luxon format strings to make date formatting easy.
+date: 2023-03-26
 ---
 
 In this recipe, we’ll create a WebC component that uses [Luxon](https://moment.github.io/luxon/#/) to format `<time>` elements for you. Eleventy already has a dependency on Luxon, so we don’t even have to install anything.
@@ -12,7 +13,11 @@ Before we look at how to build the component, let’s look at what it will look 
 <figure>
 
 ```html
-<luxon-time :@value="page.date" @machine-format="yyyy-LL-dd" @format="d LLLL yyyy"></luxon-time>
+<luxon-time
+	:@value="page.date"
+	@machine-format="yyyy-LL-dd"
+	@format="d LLLL yyyy"
+></luxon-time>
 ```
 
 <figcaption>Example use of our time-formatting <code>&lt;luxon-time></code> element.</figcaption>
@@ -32,15 +37,16 @@ The component itself is relatively short.
 
 ```html
 <script webc:type="js">
-  const { DateTime } = require("luxon");
-  const dt = value instanceof Date
-    ? DateTime.fromJSDate(value)
-    : DateTime.fromISO(value);
+	const { DateTime } = require("luxon");
+	const dt =
+		value instanceof Date
+			? DateTime.fromJSDate(value)
+			: DateTime.fromISO(value);
 
-  const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
-  const display = dt.toFormat(format || site.dateFormat);
+	const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
+	const display = dt.toFormat(format || site.dateFormat);
 
-  `<time datetime="${datetime}">${display}</time>`
+	`<time datetime="${datetime}">${display}</time>`;
 </script>
 ```
 
@@ -53,9 +59,10 @@ The first thing we do is we import the `DateTime` object from Luxon and parse th
 
 ```js
 const { DateTime } = require("luxon");
-const dt = value instanceof Date
-  ? DateTime.fromJSDate(value)
-  : DateTime.fromISO(value);
+const dt =
+	value instanceof Date
+		? DateTime.fromJSDate(value)
+		: DateTime.fromISO(value);
 ```
 
 <figcaption>Create the Luxon <code>DateTime</code> object from the value provided to our WebC component.</figcaption>
@@ -78,9 +85,8 @@ Finally, we generate a valid HTML `<time>` element using our formatted strings.
 <figure>
 
 ```js
-`<time datetime="${datetime}">${display}</time>`
+`<time datetime="${datetime}">${display}</time>`;
 ```
 
 <figcaption>Use the formatted strings in an HTML <code>&lt;time></code> element.</figcaption>
 </figure>
-

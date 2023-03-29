@@ -1,6 +1,7 @@
 ---
 title: Looping with Render Functions
 description: Did you know that too much copying and pasting wears out your operating system’s clipboard? Extend the life of your OS by using loops!
+date: 2023-03-24
 ---
 
 Unless you really like copying and pasting, you’re probably going to want to write some loops in your HTML templates.
@@ -20,13 +21,15 @@ Let’s start simple.
 
 ```html
 <ul>
-  <script webc:type="js" webc:is="template">
-    collections.all
-      .map((page) => `<li>
+	<script webc:type="js" webc:is="template">
+		collections.all
+			.map(
+				(page) => `<li>
           <a href="${page.url}">${page.data.title}</a>
-        </li>`)
-      .join("");
-  </script>
+        </li>`
+			)
+			.join("");
+	</script>
 </ul>
 ```
 
@@ -41,18 +44,21 @@ You pass it a tag name, and an optional limit, and it produces `<article>` tags 
 
 ```html
 <script webc:type="js" webc:is="template">
-  // Copy the collection because Array.prototype.reverse() reverses the array
-  // in-place, and we don't want to permanently reverse the collection, we just
-  // want to reverse it for this component.
-  let collection = [...collections[tag]].reverse();
+	// Copy the collection because Array.prototype.reverse() reverses the array
+	// in-place, and we don't want to permanently reverse the collection, we just
+	// want to reverse it for this component.
+	let collection = [...collections[tag]].reverse();
 
-  if (limit) collection = collection.slice(0, limit);
+	if (limit) collection = collection.slice(0, limit);
 
-  collection.map((page) => `<article>
+	collection
+		.map(
+			(page) => `<article>
       <a href="${page.url}">${page.data.title}</a>
       <p>${page.data.description}</p>
-    </article>`)
-  .join("");
+    </article>`
+		)
+		.join("");
 </script>
 ```
 

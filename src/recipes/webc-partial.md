@@ -1,6 +1,7 @@
 ---
 title: Partials with WebC
 description: Package up common snippets of HTML inside of WebC for fun and profit!
+date: 2022-10-06
 ---
 
 Partials — or snippets — are the simplest form of code reuse.
@@ -14,7 +15,7 @@ Partials in WebC are trivially easy.
 
 ```html
 <footer>
-  <p>&copy; 2022 Yours Truly.</p>
+	<p>&copy; 2022 Yours Truly.</p>
 </footer>
 ```
 

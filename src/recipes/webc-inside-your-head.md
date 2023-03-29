@@ -1,6 +1,7 @@
 ---
 title: WebC Inside Your Head
 description: WebC in the brain, WebC in the membrane!
+date: 2023-01-15
 ---
 
 Page titles usually include multiple pieces of information: the name of the current page and the name of the site.
@@ -18,17 +19,17 @@ Render functions to the rescue!
 
 ```html
 <script webc:type="js" webc:is="template">
-  let metaTitle;
+	let metaTitle;
 
-  if (title) {
-    // If the current page has a title, put it before the site title
-    metaTitle = `${title} — ${site.title}`;
-  } else {
-    // If the current page has no title, just put the site title
-    metaTitle = site.title;
-  }
+	if (title) {
+		// If the current page has a title, put it before the site title
+		metaTitle = `${title} — ${site.title}`;
+	} else {
+		// If the current page has no title, just put the site title
+		metaTitle = site.title;
+	}
 
-  `<title>${metaTitle}</title>`;
+	`<title>${metaTitle}</title>`;
 </script>
 ```
 
@@ -50,13 +51,12 @@ So in our `<head>` we’ll write a normal `<title>` element and set `webc:is="me
 <figure>
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title webc:is="meta-title"></title>
-  </head>
-  <body>
-  </body>
+	<head>
+		<title webc:is="meta-title"></title>
+	</head>
+	<body></body>
 </html>
 ```
 
