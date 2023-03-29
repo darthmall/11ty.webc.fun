@@ -1,0 +1,7 @@
+---
+layout: layouts/base.webc
+---
+
+<a href="#skip">Skip to content</a>
+<main @raw="content"></main>
+<site-foot></site-foot>
