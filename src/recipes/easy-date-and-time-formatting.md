@@ -1,7 +1,7 @@
 ---
 title: Easy Date and Time Formatting with Luxon
 description: Override the &lt;time> element to accept date objects and Luxon format strings to make date formatting easy.
-date: 2023-03-26
+date: 2023-03-29
 ---
 
 In this recipe, we’ll create a WebC component that uses [Luxon](https://moment.github.io/luxon/#/) to format `<time>` elements for you. Eleventy already has a dependency on Luxon, so we don’t even have to install anything.
@@ -13,14 +13,14 @@ Before we look at how to build the component, let’s look at what it will look 
 <figure>
 
 ```html
-<luxon-time
+<time
 	:@value="page.date"
 	@machine-format="yyyy-LL-dd"
 	@format="d LLLL yyyy"
-></luxon-time>
+></time>
 ```
 
-<figcaption>Example use of our time-formatting <code>&lt;luxon-time></code> element.</figcaption>
+<figcaption>Example use of our time-formatting <code>&lt;time></code> element.</figcaption>
 </figure>
 
 The `value` property is how we pass our date as either a JavaScript `Date` object or an ISO date string. We use `:@` to ensure that the property is private (`@`) and doesn’t end up on the final HTML output and that WebC knows to evaluate the attribute value as a variable reference (`:`).
@@ -30,6 +30,8 @@ The `machine-format` property provides a format string used to format the date f
 Finally, the `format` property is another Luxon format string. This one is used to define the format displayed as the `<time>` element’s text content. We can also make this property optional, if we have a default format we like for dates. Again, we use an `@` when we invoke the component to avoid this attribute ending up in our final HTML.
 
 ## Implementing the Component
+
+WebC allows us to create components with the same name as built-in HTML elements. We’ll override the `<time>` element to allow ourselves to pass in a `Date` object or ISO string, as well as format strings for Luxon. Of course, you can name your component anything you want. In a previous iteration of this recipe, it was called `<luxon-time>`.
 
 The component itself is relatively short.
 
@@ -46,11 +48,11 @@ The component itself is relatively short.
 	const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
 	const display = dt.toFormat(format || site.dateFormat);
 
-	`<time datetime="${datetime}">${display}</time>`;
+	`<time webc:raw datetime="${datetime}">${display}</time>`;
 </script>
 ```
 
-<figcaption>luxon-time.webc</figcaption>
+<figcaption>time.webc</figcaption>
 </figure>
 
 The first thing we do is we import the `DateTime` object from Luxon and parse the date value passed to the component. We check to see if `value` is an instance of a JavaScript `Date` object or not. If it is, we call `DateTime.fromJSDate`, otherwise we assume it’s an ISO string and we call `DateTime.fromISO`.
@@ -59,10 +61,9 @@ The first thing we do is we import the `DateTime` object from Luxon and parse th
 
 ```js
 const { DateTime } = require("luxon");
-const dt =
-	value instanceof Date
-		? DateTime.fromJSDate(value)
-		: DateTime.fromISO(value);
+const dt = value instanceof Date
+	? DateTime.fromJSDate(value)
+	: DateTime.fromISO(value);
 ```
 
 <figcaption>Create the Luxon <code>DateTime</code> object from the value provided to our WebC component.</figcaption>
@@ -85,8 +86,10 @@ Finally, we generate a valid HTML `<time>` element using our formatted strings.
 <figure>
 
 ```js
-`<time datetime="${datetime}">${display}</time>`;
+`<time webc:raw datetime="${datetime}">${display}</time>`;
 ```
 
 <figcaption>Use the formatted strings in an HTML <code>&lt;time></code> element.</figcaption>
 </figure>
+
+**If you override the HTML `<time>` element, do not forget to include `webc:raw` in the output from your render function.** WebC re-processes output from render functions as WebC. If you call your element `time.webc` and return a `<time>` element without `webc:raw`, you’ll get an error because WebC will loop infinitely.
