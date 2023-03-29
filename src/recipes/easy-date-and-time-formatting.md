@@ -40,10 +40,9 @@ The component itself is relatively short.
 ```html
 <script webc:type="js">
 	const { DateTime } = require("luxon");
-	const dt =
-		value instanceof Date
-			? DateTime.fromJSDate(value)
-			: DateTime.fromISO(value);
+	const dt = value instanceof Date
+		? DateTime.fromJSDate(value, { zone: "utc" })
+		: DateTime.fromISO(value);
 
 	const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
 	const display = dt.toFormat(format || site.dateFormat);
@@ -55,14 +54,14 @@ The component itself is relatively short.
 <figcaption>time.webc</figcaption>
 </figure>
 
-The first thing we do is we import the `DateTime` object from Luxon and parse the date value passed to the component. We check to see if `value` is an instance of a JavaScript `Date` object or not. If it is, we call `DateTime.fromJSDate`, otherwise we assume it’s an ISO string and we call `DateTime.fromISO`.
+The first thing we do is we import the `DateTime` object from Luxon and parse the date value passed to the component. We check to see if `value` is an instance of a JavaScript `Date` object or not. If it is, we call `DateTime.fromJSDate`, otherwise we assume it’s an ISO string and we call `DateTime.fromISO`. We pass UTC for the timezone when we parse a `Date` object to avoid the [dates off-by-one pitfall](https://www.11ty.dev/docs/dates/#dates-off-by-one-day).
 
 <figure>
 
 ```js
 const { DateTime } = require("luxon");
 const dt = value instanceof Date
-	? DateTime.fromJSDate(value)
+	? DateTime.fromJSDate(value, { zone: "utc" })
 	: DateTime.fromISO(value);
 ```
 
