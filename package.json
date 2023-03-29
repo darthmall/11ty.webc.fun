@@ -13,7 +13,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "@11ty/eleventy-plugin-webc": "^0.9.3",
+    "@11ty/eleventy-plugin-webc": "^0.10.1",
     "open-props": "^1.4.16",
     "postcss": "^8.4.17",
     "postcss-import": "^15.0.0"
