@@ -1,25 +1,23 @@
+<script webc:setup>
+	function getItemList(collections, tag, limit=0) {
+		let result = [...collections[tag]].reverse();
+		return limit ? result.slice(0, limit) : result;
+	}
+</script>
+
 <div class="flow" style="--space: var(--space-l)">
-	<script webc:type="js" webc:is="template">
-		let collection = [...collections[tag]].reverse();
-
-		if (limit) collection = collection.slice(0, limit);
-
-		collection.map((page) => `<article>
-				<div class="flow" style="--space: var(--space-xs)">
-					<header>
-						<a href="${page.url}">${page.data.title}</a>
-					</header>
-					<p>
-						${page.data.description}
-					</p>
-					<footer>
-						<strong>Updated:</strong>
-						<luxon-time @value="${page.date.toISOString()}" @machine-format="yyyy-LL-dd"></luxon-time>
-					</footer>
-				</div>
-			</article>`)
-			.join("");
-	</script>
+	<article webc:for="item of getItemList(collections, tag, limit)">
+		<div class="flow" style="--space: var(--space-xs)">
+			<header>
+				<a :href="item.url" @raw="item.data.title"></a>
+			</header>
+			<p @raw="item.data.description"></p>
+			<footer>
+				<strong>Updated:</strong>
+				<luxon-time :@value="item.date" @machine-format="yyyy-LL-dd"></luxon-time>
+			</footer>
+		</div>
+	</article>
 </div>
 
 <style webc:scoped>
