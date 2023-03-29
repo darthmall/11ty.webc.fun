@@ -23,9 +23,7 @@ module.exports = function(eleventyConfig) {
 		return collectionApi.getFilteredByGlob("src/pages/recipes/**/*");
 	});
 
-	// FIXME: The passthrough behavior in the dev server doesn't seem to be
-	// working, so for now we'll go back to the copy behavior.
-	eleventyConfig.setServerPassthroughCopyBehavior("copy");
+	eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
 	eleventyConfig.addPassthroughCopy({ public: "." });
 
 	return {
