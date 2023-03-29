@@ -1,6 +1,7 @@
 ---
 title: Outputting a Variable
 description: I’ve got 99 problems, but writing out variables in my WebC components ain’t one.
+date: 2023-01-15
 ---
 
 Coming from some of Eleventy’s other template languages, you’re probably used to wrapping your variable names in curly braces.
@@ -33,7 +34,6 @@ WebC escapes strings when used with `@text` the same way that Nunjucks escapes s
 ## Writing Unescaped HTML
 
 With Nunjucks, you can use the `safe` filter to prevent the value from being escaped.
-
 
 <figure>
 

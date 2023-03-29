@@ -6,35 +6,30 @@ const atImport = require("postcss-import");
 module.exports = function(eleventyConfig) {
 	eleventyConfig.addPlugin(pluginRSS);
 	eleventyConfig.addPlugin(pluginWebC, {
-		components: "src/components/**/*.webc",
+		components: "src/_includes/components/*.webc",
 	});
 
 	eleventyConfig.addTemplateFormats("css");
 	eleventyConfig.addExtension("css", {
 		outputFileExtension: "css",
-		compile: async function (inputContent) {
+		compile: async function(inputContent) {
 			const result = await postcss([atImport]).process(inputContent);
 
 			return async () => result.css;
 		},
 	});
 
-	eleventyConfig.addCollection("feed", function (collectionApi) {
+	eleventyConfig.addCollection("feed", function(collectionApi) {
 		return collectionApi.getFilteredByGlob("src/pages/recipes/**/*");
 	});
 
-	// FIXME: The passthrough behavior in the dev server doesn't seem to be
-	// working, so for now we'll go back to the copy behavior.
-	eleventyConfig.setServerPassthroughCopyBehavior("copy");
-	eleventyConfig.addPassthroughCopy({ "public": "." });
+	eleventyConfig.setServerPassthroughCopyBehavior("passthrough");
+	eleventyConfig.addPassthroughCopy({ public: "." });
 
 	return {
 		dir: {
-			input: "src/pages",
-			includes: "../components",
-			layouts: "../layouts",
-			data: "../data",
+			input: "src",
 		},
-		markdownTemplateEngine: false
+		markdownTemplateEngine: false,
 	};
 };

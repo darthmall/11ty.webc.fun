@@ -1,6 +1,7 @@
 ---
 title: Remove Custom Elements From Your Output
 description: Consider each custom element in your markup and ask yourself, “does this element spark joy?”
+date: 2023-03-12
 ---
 
 When you create a component with WebC that includes at least one `<script>` or `<style>` tag, WebC keeps the custom element in the output it generates.

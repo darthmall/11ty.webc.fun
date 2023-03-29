@@ -1,7 +1,7 @@
 ---
 title: Colophon
 description: For the nerds
-layout: base.webc
+layout: layouts/default.webc
 ---
 
 <hero-block>

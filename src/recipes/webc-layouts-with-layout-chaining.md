@@ -1,6 +1,7 @@
 ---
 title: WebC Layouts with Layout Chaining
 description: How to create and reuse WebC layouts for your site.
+date: 2023-01-15
 ---
 
 WebC can be used for [layouts](https://www.11ty.dev/docs/layouts/) in your Eleventy site.
@@ -9,10 +10,12 @@ You simply write your HTML and then add `@html="content"` to whatever element yo
 <figure>
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>...</head>
-  <body @html="content"></body>
+	<head>
+		...
+	</head>
+	<body @html="content"></body>
 </html>
 ```
 
@@ -47,13 +50,15 @@ This is the result:
 <figure>
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>...</head>
-  <body>
-    <h1>Heading</h1>
-    <p>Lorem ipsum…</p>
-  </body>
+	<head>
+		...
+	</head>
+	<body>
+		<h1>Heading</h1>
+		<p>Lorem ipsum…</p>
+	</body>
 </html>
 ```
 
@@ -68,10 +73,12 @@ In fact, since WebC doesn’t really have template inheritance like Nunjucks and
 <figure>
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>...</head>
-  <body @html="content"></body>
+	<head>
+		...
+	</head>
+	<body @html="content"></body>
 </html>
 ```
 
@@ -84,6 +91,7 @@ In fact, since WebC doesn’t really have template inheritance like Nunjucks and
 ---
 layout: root.webc
 ---
+
 <header>...</header>
 <main @html="content"></main>
 <footer>...</footer>
@@ -118,17 +126,19 @@ The final result of combining <samp>index.md</samp>, <samp>main.webc</samp>, and
 <figure>
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>...</head>
-  <body>
-    <header>...</header>
-    <main>
-      <h1>Heading</h1>
-      <p>Lorem ipsum…</p>
-    </main>
-    <footer>...</footer>
-  </body>
+	<head>
+		...
+	</head>
+	<body>
+		<header>...</header>
+		<main>
+			<h1>Heading</h1>
+			<p>Lorem ipsum…</p>
+		</main>
+		<footer>...</footer>
+	</body>
 </html>
 ```
 

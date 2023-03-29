@@ -1,5 +1,5 @@
 ---
-layout: home.webc
+layout: layouts/home.webc
 eleventyExcludeFromCollections: true
 ---
 
@@ -9,4 +9,3 @@ Here is a website built with [Eleventy](https://11ty.dev/) and [WebC](https://gi
 It is a test bed.
 The recipes you’ll find here were used to develop this very site.
 Exciting, I know.
-
