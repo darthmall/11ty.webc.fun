@@ -6,7 +6,7 @@ layout: layouts/default.webc
 	<bread-crumbs></bread-crumbs>
 	<header>
 		<h1 @html="title"></h1>
-		<p>Updated: <luxon-time :@value="page.date" @machine-format="yyyy-LL-dd"></luxon-time></p>
+		<p>Updated: <time :@value="page.date" @machine-format="yyyy-LL-dd"></time></p>
 	</header>
 	<div id="skip" @html="content" tabindex="-1"></div>
 </article>

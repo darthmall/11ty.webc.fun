@@ -7,5 +7,5 @@
 	const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
 	const display = dt.toFormat(format || site.dateFormat);
 
-	`<time datetime="${datetime}">${display}</time>`
+	`<time webc:raw datetime="${datetime}">${display}</time>`
 </script>

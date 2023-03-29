@@ -14,7 +14,7 @@
 			<p @raw="item.data.description"></p>
 			<footer>
 				<strong>Updated:</strong>
-				<luxon-time :@value="item.date" @machine-format="yyyy-LL-dd"></luxon-time>
+				<time :@value="item.date" @machine-format="yyyy-LL-dd"></time>
 			</footer>
 		</div>
 	</article>
