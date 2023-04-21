@@ -1,11 +1,11 @@
 ---
 title: WebC Layouts with Layout Chaining
 description: How to create and reuse WebC layouts for your site.
-date: 2023-01-15
+date: 2023-04-21
 ---
 
 WebC can be used for [layouts](https://www.11ty.dev/docs/layouts/) in your Eleventy site.
-You simply write your HTML and then add `@html="content"` to whatever element you want to contain the page content.
+You simply write your HTML and then add `@raw="content"` to whatever element you want to contain the page content.
 
 <figure>
 
@@ -15,7 +15,7 @@ You simply write your HTML and then add `@html="content"` to whatever element yo
 	<head>
 		...
 	</head>
-	<body @html="content"></body>
+	<body @raw="content"></body>
 </html>
 ```
 
@@ -78,7 +78,7 @@ In fact, since WebC doesn’t really have template inheritance like Nunjucks and
 	<head>
 		...
 	</head>
-	<body @html="content"></body>
+	<body @raw="content"></body>
 </html>
 ```
 
@@ -93,7 +93,7 @@ layout: root.webc
 ---
 
 <header>...</header>
-<main @html="content"></main>
+<main @raw="content"></main>
 <footer>...</footer>
 ```
 
