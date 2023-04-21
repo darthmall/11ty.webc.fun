@@ -10,7 +10,7 @@ layout: layouts/default.webc
 	<p @raw="site.description"></p>
 </hero-block>
 
-<article id="skip" tabindex="-1" @html="content"></article>
+<article id="skip" tabindex="-1" @raw="content"></article>
 
 <h2>Recently Updated</h2>
 <card-carousel tag="recipe" :limit="site.numRecent"></card-carousel>

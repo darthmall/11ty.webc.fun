@@ -5,8 +5,8 @@ layout: layouts/default.webc
 ---
 
 <hero-block>
-	<template slot="title" @html="title" webc:nokeep></template>
-	<p @html="description"></p>
+	<template slot="title" @raw="title" webc:nokeep></template>
+	<p @raw="description"></p>
 </hero-block>
 
 <article id="skip" tabindex="-1">

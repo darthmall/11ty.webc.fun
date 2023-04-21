@@ -6,7 +6,7 @@
 </script>
 
 <div class="flow" style="--space: var(--space-l)">
-	<article webc:for="item of getItemList(collections, tag, limit)">
+	<article webc:for="item of getItemList($data.collections, tag, limit)">
 		<div class="flow" style="--space: var(--space-xs)">
 			<header>
 				<a :href="item.url" @raw="item.data.title"></a>

@@ -6,7 +6,7 @@
 @import "open-props/shadows.min.css" layer(props);
 @import "open-props/gray.min.css" layer(props);
 @import "open-props/blue.min.css" layer(props);
-@import "open-props/grape.min.css" layer(props);
+@import "open-props/purple.min.css" layer(props);
 
 @font-face {
 	font-family: "Atkinson Hyperlegible";
@@ -54,13 +54,13 @@
 		--font-display: "Getai Grotesk Display", system-ui, sans-serif;
 
 		/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1140,20,1.25,5,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
-		--step--1: clamp(0.94rem, calc(0.91rem + 0.12vw), 1.00rem);
+		--step--1: clamp(0.94rem, calc(0.91rem + 0.12vw), 1rem);
 		--step-0: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
 		--step-1: clamp(1.35rem, calc(1.27rem + 0.41vw), 1.56rem);
 		--step-2: clamp(1.62rem, calc(1.49rem + 0.65vw), 1.95rem);
 		--step-3: clamp(1.94rem, calc(1.75rem + 0.97vw), 2.44rem);
-		--step-4: clamp(2.33rem, calc(2.05rem + 1.40vw), 3.05rem);
-		--step-5: clamp(2.80rem, calc(2.40rem + 1.98vw), 3.82rem);
+		--step-4: clamp(2.33rem, calc(2.05rem + 1.4vw), 3.05rem);
+		--step-5: clamp(2.8rem, calc(2.4rem + 1.98vw), 3.82rem);
 
 		--line-height-xs: 1;
 		--line-height-s: 1.15;
@@ -70,16 +70,16 @@
 		--space-xs: clamp(0.56rem, calc(0.54rem + 0.12vw), 0.63rem);
 		--space-s: clamp(1.13rem, calc(1.08rem + 0.24vw), 1.25rem);
 		--space-m: clamp(1.69rem, calc(1.61rem + 0.37vw), 1.88rem);
-		--space-l: clamp(2.25rem, calc(2.15rem + 0.49vw), 2.50rem);
-		--space-xl: clamp(4.50rem, calc(4.30rem + 0.98vw), 5.00rem);
-		--space-2xl: clamp(9.00rem, calc(8.61rem + 1.95vw), 10.00rem);
+		--space-l: clamp(2.25rem, calc(2.15rem + 0.49vw), 2.5rem);
+		--space-xl: clamp(4.5rem, calc(4.3rem + 0.98vw), 5rem);
+		--space-2xl: clamp(9rem, calc(8.61rem + 1.95vw), 10rem);
 
 		/* One-up pairs */
 		--space-xs-s: clamp(0.56rem, calc(0.29rem + 1.34vw), 1.25rem);
 		--space-s-m: clamp(1.13rem, calc(0.83rem + 1.46vw), 1.88rem);
-		--space-m-l: clamp(1.69rem, calc(1.37rem + 1.59vw), 2.50rem);
-		--space-l-xl: clamp(2.25rem, calc(1.18rem + 5.37vw), 5.00rem);
-		--space-xl-2xl: clamp(4.50rem, calc(2.35rem + 10.73vw), 10.00rem);
+		--space-m-l: clamp(1.69rem, calc(1.37rem + 1.59vw), 2.5rem);
+		--space-l-xl: clamp(2.25rem, calc(1.18rem + 5.37vw), 5rem);
+		--space-xl-2xl: clamp(4.5rem, calc(2.35rem + 10.73vw), 10rem);
 	}
 }
 
@@ -105,8 +105,8 @@
 		--text-3-light: var(--gray-9);
 		--link-light: var(--blue-8);
 		--link-hover-light: var(--blue-9);
-		--link-visited-light: var(--grape-7);
-		--link-visited-hover-light: var(--grape-8);
+		--link-visited-light: var(--purple-7);
+		--link-visited-hover-light: var(--purple-8);
 		--gradient-light: var(--gradient-15);
 
 		--surface-1-dark: var(--gray-9);
@@ -118,9 +118,9 @@
 		--text-3-dark: var(--gray-3);
 		--link-dark: var(--blue-4);
 		--link-hover-dark: var(--blue-3);
-		--link-visited-dark: var(--grape-4);
-		--link-visited-hover-dark: var(--grape-3);
+		--link-visited-dark: var(--purple-4);
 		--gradient-dark: var(--gradient-3);
+		--link-visited-hover-dark: var(--purple-3);
 
 		--surface-1: var(--surface-1-light);
 		--surface-2: var(--surface-2-light);
@@ -293,7 +293,7 @@
 		scroll-margin-top: 2ex;
 	}
 
-	[role=list] {
+	[role="list"] {
 		padding: 0;
 		list-style: none;
 	}
@@ -328,7 +328,7 @@
 }
 
 @layer layout {
-	[data-layout=cluster] {
+	[data-layout="cluster"] {
 		gap: var(--space, var(--space-m));
 		align-items: center;
 		flex-wrap: wrap;
@@ -342,6 +342,10 @@
 		margin-block-start: var(--space, var(--space-m));
 	}
 
-	.mbs-xl { margin-block-start: var(--space-xl); }
-	.mbs-l { margin-block-start: var(--space-l); }
+	.mbs-xl {
+		margin-block-start: var(--space-xl);
+	}
+	.mbs-l {
+		margin-block-start: var(--space-l);
+	}
 }
