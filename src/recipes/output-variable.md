@@ -1,7 +1,7 @@
 ---
 title: Outputting a Variable
 description: I’ve got 99 problems, but writing out variables in my WebC components ain’t one.
-date: 2023-01-15
+date: 2023-04-21
 ---
 
 Coming from some of Eleventy’s other template languages, you’re probably used to wrapping your variable names in curly braces.
@@ -62,5 +62,5 @@ Given our previous example of a `title` variable containing the text “1&lt;sup
 
 The other property that passes text through unescaped is `@html`.
 The difference between `@raw` and `@html` is that `@html` will run the output through WebC again.
-So, if you have a variable — <i>e.g.</i> the `content` variable that Eleventy provides when it parses your templates — that may have WebC components in it, you’ll want to use `@html`, not `@raw`.
-This is why we used `@html` in the [layout chaining](/recipes/webc-layouts-with-layout-chaining/) recipe.
+So, if you have a variable that may have WebC components in it, you’ll want to use `@html`, not `@raw`.
+Be careful about using `@html` in layout chains, because if you have a WebC component that doesn’t remove its custom element, this element could be reprocessed multiple times as Eleventy works its way up the layout chain.
