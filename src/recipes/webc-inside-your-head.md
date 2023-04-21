@@ -1,7 +1,7 @@
 ---
 title: WebC Inside Your Head
 description: WebC in the brain, WebC in the membrane!
-date: 2023-01-15
+date: 2023-04-21
 ---
 
 Page titles usually include multiple pieces of information: the name of the current page and the name of the site.
@@ -23,10 +23,10 @@ Render functions to the rescue!
 
 	if (title) {
 		// If the current page has a title, put it before the site title
-		metaTitle = `${title} — ${site.title}`;
+		metaTitle = `${title} — ${$data.site.title}`;
 	} else {
 		// If the current page has no title, just put the site title
-		metaTitle = site.title;
+		metaTitle = $data.site.title;
 	}
 
 	`<title>${metaTitle}</title>`;
