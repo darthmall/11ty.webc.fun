@@ -1,7 +1,7 @@
 ---
 title: Easy Date and Time Formatting with Luxon
 description: Override the &lt;time> element to accept date objects and Luxon format strings to make date formatting easy.
-date: 2023-03-29
+date: 2023-04-21
 ---
 
 In this recipe, we’ll create a WebC component that uses [Luxon](https://moment.github.io/luxon/#/) to format `<time>` elements for you. Eleventy already has a dependency on Luxon, so we don’t even have to install anything.
@@ -40,12 +40,13 @@ The component itself is relatively short.
 ```html
 <script webc:type="js">
 	const { DateTime } = require("luxon");
-	const dt = value instanceof Date
-		? DateTime.fromJSDate(value, { zone: "utc" })
-		: DateTime.fromISO(value);
+	const dt =
+		value instanceof Date
+			? DateTime.fromJSDate(value, { zone: "utc" })
+			: DateTime.fromISO(value);
 
 	const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
-	const display = dt.toFormat(format || site.dateFormat);
+	const display = dt.toFormat(format || $data.site.dateFormat);
 
 	`<time webc:raw datetime="${datetime}">${display}</time>`;
 </script>
@@ -60,9 +61,10 @@ The first thing we do is we import the `DateTime` object from Luxon and parse th
 
 ```js
 const { DateTime } = require("luxon");
-const dt = value instanceof Date
-	? DateTime.fromJSDate(value, { zone: "utc" })
-	: DateTime.fromISO(value);
+const dt =
+	value instanceof Date
+		? DateTime.fromJSDate(value, { zone: "utc" })
+		: DateTime.fromISO(value);
 ```
 
 <figcaption>Create the Luxon <code>DateTime</code> object from the value provided to our WebC component.</figcaption>
@@ -74,7 +76,7 @@ Next, we use our format strings to generate two formatted dates for our final ou
 
 ```js
 const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
-const display = dt.toFormat(format || site.dateFormat);
+const display = dt.toFormat(format || $data.site.dateFormat);
 ```
 
 <figcaption>Generate formatted strings from our date object.</figcaption>
