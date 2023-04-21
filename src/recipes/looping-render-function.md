@@ -1,7 +1,7 @@
 ---
 title: Looping with Render Functions
 description: Did you know that too much copying and pasting wears out your operating system’s clipboard? Extend the life of your OS by using loops!
-date: 2023-03-24
+date: 2023-04-21
 ---
 
 Unless you really like copying and pasting, you’re probably going to want to write some loops in your HTML templates.
@@ -25,8 +25,8 @@ Let’s start simple.
 		collections.all
 			.map(
 				(page) => `<li>
-          <a href="${page.url}">${page.data.title}</a>
-        </li>`
+					<a href="${page.url}">${page.data.title}</a>
+				</li>`
 			)
 			.join("");
 	</script>
@@ -47,16 +47,16 @@ You pass it a tag name, and an optional limit, and it produces `<article>` tags 
 	// Copy the collection because Array.prototype.reverse() reverses the array
 	// in-place, and we don't want to permanently reverse the collection, we just
 	// want to reverse it for this component.
-	let collection = [...collections[tag]].reverse();
+	let collection = [...$data.collections[tag]].reverse();
 
 	if (limit) collection = collection.slice(0, limit);
 
 	collection
 		.map(
 			(page) => `<article>
-      <a href="${page.url}">${page.data.title}</a>
-      <p>${page.data.description}</p>
-    </article>`
+				<a href="${page.url}">${page.data.title}</a>
+				<p>${page.data.description}</p>
+			</article>`
 		)
 		.join("");
 </script>
