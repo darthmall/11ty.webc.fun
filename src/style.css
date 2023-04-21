@@ -119,8 +119,8 @@
 		--link-dark: var(--blue-4);
 		--link-hover-dark: var(--blue-3);
 		--link-visited-dark: var(--purple-4);
-		--link-visited-hover-dark: var(--purple-3);
 		--gradient-dark: var(--gradient-3);
+		--link-visited-hover-dark: var(--purple-3);
 
 		--surface-1: var(--surface-1-light);
 		--surface-2: var(--surface-2-light);

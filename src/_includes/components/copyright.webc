@@ -1,9 +1,9 @@
 <script webc:type="js" webc:root="override">
 	const now = new Date();
-	let author = this.site.author.name;
+	let author = $data.site.author.name;
 
-	if (this.site.author.url) {
-		author = `<a href="${this.site.author.url}">${author}</a>`;
+	if ($data.site.author.url) {
+		author = `<a href="${$data.site.author.url}">${author}</a>`;
 	}
 
 	`&copy; ${now.getFullYear()} ${author}.`;

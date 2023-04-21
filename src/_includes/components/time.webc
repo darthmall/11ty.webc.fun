@@ -5,7 +5,7 @@
 		: DateTime.fromISO(value);
 
 	const datetime = machineFormat ? dt.toFormat(machineFormat) : dt.toISO();
-	const display = dt.toFormat(format || site.dateFormat);
+	const display = dt.toFormat(format || $data.site.dateFormat);
 
 	`<time webc:raw datetime="${datetime}">${display}</time>`
 </script>

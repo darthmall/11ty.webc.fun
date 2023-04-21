@@ -1,8 +1,8 @@
 <script webc:type="js">
-	const descText = description ?? site.description;
-	const titleText = title ?? site.title;
+	const descText = description ?? $data.site.description;
+	const titleText = title ?? $data.site.title;
 
 	`<meta property="og:title" content="${titleText}">
 		<meta name="description" property="og:description" content="${descText}">
-		<meta name="author" content="${site.author.name}">`;
+		<meta name="author" content="${$data.site.author.name}">`;
 </script>
