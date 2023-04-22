@@ -10,7 +10,6 @@
 	<title webc:is="meta-title" webc:nokeep></title>
 
 	<meta webc:is="meta-social" webc:nokeep>
-	</meta>
 	<meta name="generator" :content="eleventy.generator">
 
 	<link webc:is="link-canonical" webc:nokeep>
