@@ -2,8 +2,8 @@
 	let text = $data.site.title;
 
 	if ($data.title) {
-    text = $data.title + ` « ` + text;
+		text = `${$data.title} « ${text}`;
   }
-
+	
 	`<title>${text}</title>`;
 </script>
