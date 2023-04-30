@@ -4,6 +4,6 @@
 	if ($data.title) {
 		text = `${$data.title} « ${text}`;
 	}
-	
+
 	`<title>${text}</title>`;
 </script>
