@@ -13,7 +13,8 @@ module.exports = function(eleventyConfig) {
 	eleventyConfig.addExtension("css", {
 		outputFileExtension: "css",
 		compile: async function(inputContent) {
-			const result = await postcss([atImport]).process(inputContent);
+			// from: undefined is required to avoid a warning - see: https://stackoverflow.com/a/63193341/650482
+			const result = await postcss([atImport]).process(inputContent, { from: undefined });
 
 			return async () => result.css;
 		},
