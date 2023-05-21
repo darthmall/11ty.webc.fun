@@ -1,8 +1,8 @@
 <script webc:type="js">
 	let text = $data.site.title;
 
-	if (title) {
-		text = `${title} « ` + text;
+	if ($data.title) {
+		text = `${$data.title} « ${text}`;
 	}
 
 	`<title>${text}</title>`;
