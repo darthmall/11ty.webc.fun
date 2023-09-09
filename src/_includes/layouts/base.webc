@@ -25,6 +25,14 @@
 	<link rel="alternate" href="/feed.xml" type="application/rss+xml">
 </head>
 
-<body @raw="content"></body>
+<body>
+	<aside>
+		<p>
+			<strong>Deprection Notice.</strong> This site will go offline on <time
+					webc:raw datetime="2023-10-01">1 October 2023</time>.
+		</p>
+	</aside>
+	<template @raw="content" webc:nokeep></template>
+</body>
 
 </html>
